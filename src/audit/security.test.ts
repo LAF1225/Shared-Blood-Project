@@ -397,6 +397,27 @@ describe('§26/§30 HTTP methods', () => {
 });
 
 // ---------------------------------------------------------------------------
+// Module 26 §20 — every dismissible surface is keyboard-dismissible
+// ---------------------------------------------------------------------------
+
+describe('§20 dismissible surfaces handle Escape', () => {
+  // The mobile navigation panel shipped without an Escape handler while the
+  // desktop dropdown and the search dialog both had one, so a keyboard user who
+  // opened the mobile menu could not close it without pointing at the X. Assert
+  // all three together so the next overlay component cannot repeat it.
+  it.each([
+    ['MobileNav', 'src/components/layout/MobileNav.tsx'],
+    ['NavDropdown', 'src/components/layout/NavDropdown.tsx'],
+    ['SearchEntry', 'src/components/search/SearchEntry.tsx'],
+  ])('%s closes on Escape', (_name, file) => {
+    const source = readFileSync(join(ROOT, file), 'utf8');
+    expect(source).toMatch(/key\s*===?\s*'Escape'|key\s*!==\s*'Escape'/);
+    expect(source).toContain("addEventListener('keydown'");
+    expect(source).toContain("removeEventListener('keydown'");
+  });
+});
+
+// ---------------------------------------------------------------------------
 // §22, §23, §30.14-16 — privacy, analytics and retired surfaces
 // ---------------------------------------------------------------------------
 

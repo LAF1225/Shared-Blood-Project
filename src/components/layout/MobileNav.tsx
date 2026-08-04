@@ -41,6 +41,28 @@ export function MobileNav() {
     setExpandedId(activeEntryId);
   }, [activeEntryId]);
 
+  /**
+   * Escape closes the panel (Module 26 §20).
+   *
+   * The desktop dropdown and the search dialog both did this already; the mobile
+   * panel did not, which left a keyboard user who opened it with no way to
+   * dismiss it without reaching for the close button. Focus is returned to the
+   * element that opened the panel so the tab position is not lost.
+   */
+  useEffect(() => {
+    if (!isMobileOpen) return;
+    const opener = document.activeElement as HTMLElement | null;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      closeMobile();
+      opener?.focus?.();
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isMobileOpen, closeMobile]);
+
   if (!isMobileOpen) return null;
 
   return (
