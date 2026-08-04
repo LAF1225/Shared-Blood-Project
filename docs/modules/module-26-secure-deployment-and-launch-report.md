@@ -164,7 +164,7 @@ Run against the exact deployment commit, after `npm ci`:
 | Tests | **614 passed / 53 files** (incoming baseline 599 / 52) |
 | Em-dash check | **Pass** |
 | Clean install | **Pass**, 414 packages |
-| Production build | **Pass**, 91/91 static pages, 57 prerendered routes |
+| Production build | **Pass**, 91/91 static pages, 61 prerendered routes (57 before the sitemap, robots and icon routes were added) |
 | Shared First Load JS | **103 kB**, unchanged from the incoming baseline |
 | Middleware | 52.2 kB |
 | Architecture guard | **Pass** |
