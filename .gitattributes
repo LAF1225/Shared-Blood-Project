@@ -1,0 +1,20 @@
+# Normalise line endings in the repository so a Windows working tree and a Linux
+# CI runner produce byte-identical checkouts. Without this, every file committed
+# from Windows carries CRLF and diffs become noise.
+* text=auto eol=lf
+
+# Binary assets must never be line-ending converted.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.wav binary
+*.mp3 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+
+# Generated; collapse in review diffs.
+package-lock.json linguist-generated=true -diff

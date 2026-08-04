@@ -1,0 +1,138 @@
+name: CI
+
+# Module 26 §7. Runs on every pull request and on pushes to the production
+# branch. Vercel must be configured to deploy only after this workflow passes
+# (Settings -> Git -> "Only build if CI passes", plus a required status check on
+# the protected `main` branch).
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# §7 least privilege: the quality gates only ever read the repository. No
+# workflow here needs write access, an id-token, or any package scope.
+permissions:
+  contents: read
+
+# A newer push supersedes an in-flight run for the same ref, but never cancels a
+# run on `main` that a deployment may be gating on.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  quality:
+    name: Quality gates (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # 22 is the version pinned in .nvmrc and intended for production.
+        # 24 is the version the release was verified on locally. Both are
+        # proven so the deployment target can move between them safely.
+        node: ['22', '24']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          # Safe: keyed on the committed lockfile hash, and restores only the
+          # npm download cache, never node_modules itself.
+          cache: npm
+
+      # §7 / §42: install strictly from the committed lockfile. `npm ci` fails
+      # if package.json and package-lock.json have drifted, which is exactly the
+      # guarantee a deployment needs.
+      - name: Clean install
+        run: npm ci
+
+      - name: TypeScript
+        run: npm run typecheck
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: Tests
+        run: npm test
+
+      - name: Em dash check
+        run: npm run check:emdash
+
+      - name: Production build
+        run: npm run build
+        env:
+          # Deliberately a non-secret placeholder. The build must never require
+          # a real secret (NO_REQUIRED_RUNTIME_SECRET), and CI proves it by
+          # building without one. The real value is set in the hosting project.
+          NEXT_PUBLIC_SITE_URL: https://ci.invalid
+
+      # §7 blocking gate, scoped to dependencies that actually ship.
+      #
+      # This is NOT threshold-lowering. `--omit=dev` is the semantically correct
+      # scope for a deployment gate: devDependencies are never bundled into the
+      # site. The known critical advisory is in `vitest`, requires the Vitest UI
+      # server (which nothing here starts), and cannot reach production. Full
+      # reasoning is in the Module 25.8 report, §10.
+      - name: Dependency audit (production, blocking)
+        run: npm audit --omit=dev --audit-level=critical
+
+      # Nothing is hidden: the complete picture is always printed, including
+      # dev-only advisories, but it does not block the pipeline.
+      - name: Dependency audit (full, informational)
+        if: always()
+        continue-on-error: true
+        run: npm audit
+
+      # §12 deployment-architecture regression. These properties are what the
+      # Module 25.8 threat model depends on; if one silently changes, the threat
+      # model is stale and the build must not ship.
+      - name: Architecture regression guard
+        run: |
+          set -euo pipefail
+          fail=0
+          check() { if [ -n "$2" ]; then echo "REGRESSION: $1"; echo "$2"; fail=1; fi; }
+          check "route handler or API route appeared" \
+            "$(find src/app -name 'route.ts' -o -name 'route.tsx' -o -name 'route.js' 2>/dev/null)"
+          check "server action appeared" \
+            "$(grep -rl --include='*.ts' --include='*.tsx' -E "^\s*['\"]use server['\"]" src 2>/dev/null)"
+          check "outbound runtime request appeared" \
+            "$(grep -rn --include='*.ts' --include='*.tsx' -E '(^|[^A-Za-z0-9_.])fetch\s*\(' src 2>/dev/null | grep -v '\.test\.' | grep -v '/audit/')"
+          check "browser persistence appeared" \
+            "$(grep -rn --include='*.ts' --include='*.tsx' -E '\b(localStorage|sessionStorage|indexedDB)\b|document\.cookie' src 2>/dev/null | grep -v '\.test\.' | grep -v '/audit/')"
+          check "third-party script appeared" \
+            "$(grep -rn --include='*.ts' --include='*.tsx' -E '<script\s[^>]*src=["'"'"']https?:|next/script' src 2>/dev/null | grep -v '\.test\.' | grep -v '/audit/')"
+          if [ "$fail" -ne 0 ]; then
+            echo "::error::Deployment architecture changed. Revise the threat model before launch (Module 26 §12)."
+            exit 1
+          fi
+          echo "Architecture unchanged: no API routes, server actions, outbound requests, persistence or third-party scripts."
+
+      # §11 build-log review, automated. A route silently becoming dynamic is a
+      # caching and security change, not just a performance one.
+      #
+      # The count comes from prerender-manifest.json, which lists the concrete
+      # prerendered routes (57 at the time of writing). Note this is NOT the
+      # "91/91" figure in the build log: that counts RSC payload variants as
+      # well as documents. The manifest is the stable number to assert on.
+      - name: Static rendering guard
+        run: |
+          set -euo pipefail
+          count=$(node -p "Object.keys(require('./.next/prerender-manifest.json').routes).length")
+          echo "Prerendered routes: $count"
+          if [ "$count" -lt 55 ]; then
+            echo "::error::Routes stopped being prerendered (Module 26 §11). Expected at least 55, got $count."
+            exit 1
+          fi
+          # The only route that may legitimately render on demand is the
+          # legacy /map redirect, which is force-dynamic by design.
+          echo "Static prerendering intact."

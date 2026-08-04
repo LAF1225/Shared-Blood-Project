@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Shared Blood — global design tokens (Module 01: Foundation).
+ * Colors stored as space-separated RGB channels for Tailwind alpha support.
+ * Palette derived from the official Shared Blood logo.
+ */
+:root {
+  /* Brand */
+  --color-primary: 24 84 96; /* Deep Teal  #185460 */
+  --color-primary-dark: 12 72 96; /* #0C4860 */
+  --color-primary-light: 45 112 128; /* #2D7080 */
+  --color-primary-foreground: 255 255 255;
+
+  --color-secondary: 96 144 132; /* Soft Emerald #609084 */
+  --color-secondary-dark: 74 116 106; /* #4A746A */
+  --color-secondary-foreground: 255 255 255;
+
+  --color-accent: 232 131 107; /* Warm Coral #E8836B */
+  --color-accent-dark: 200 96 74; /* #C8604A — AA-safe with white text */
+  --color-accent-strong: 165 64 42; /* #A5402A — AA text on ivory (≥4.5:1) */
+  --color-accent-foreground: 38 50 56;
+
+  /* Surfaces */
+  --color-background: 240 240 228; /* Soft Ivory #F0F0E4 */
+  --color-surface: 250 250 244; /* #FAFAF4 */
+  --color-foreground: 38 50 56; /* Dark Slate #263238 */
+  --color-muted: 228 228 216; /* #E4E4D8 */
+  --color-muted-foreground: 74 85 92; /* #4A555C (AA on ivory) */
+  --color-border: 214 214 200; /* #D6D6C8 */
+  --color-ring: 24 84 96;
+
+  /* Semantic status */
+  --color-success: 46 125 83; /* #2E7D53 */
+  --color-warning: 180 83 9; /* #B45309 */
+  --color-danger: 192 57 43; /* #C0392B */
+  --color-info: 22 96 124; /* #16607C */
+}
+
+/* Theme infrastructure only — dark values refined in a later theming module. */
+.dark {
+  --color-background: 18 26 30;
+  --color-surface: 26 36 41;
+  --color-foreground: 236 240 238;
+  --color-muted: 34 46 52;
+  --color-muted-foreground: 168 180 184;
+  --color-border: 48 62 68;
+  --color-primary: 74 148 168;
+  --color-primary-foreground: 12 26 30;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
+  }
+
+  /* Editorial headings: serif with balanced wrapping and tight optical tracking. */
+  h1,
+  h2,
+  h3 {
+    @apply font-heading;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Tabular figures for statistics/data so numbers align. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Urdu / RTL uses the Nastaliq stack — override the Latin serif/sans so
+     Urdu never falls back to a Latin-only face. */
+  [lang='ur'],
+  [dir='rtl'] {
+    @apply font-urdu;
+  }
+  html[lang='ur'] body,
+  html[dir='rtl'] body,
+  [lang='ur'] .font-heading,
+  [dir='rtl'] .font-heading {
+    font-family: var(--font-noto-urdu), 'Noto Naskh Arabic', serif;
+  }
+
+  /* Nastaliq is tall and cursive — give Urdu generous line spacing so lines
+     never collide. Tag selectors (0,1,1) override Tailwind leading-* utilities
+     (0,1,0). English (LTR) is unaffected. */
+  [lang='ur'] h1,
+  [dir='rtl'] h1 {
+    line-height: 1.7;
+  }
+  /* The large hero display heading needs extra room at Nastaliq's tall,
+     diagonal scale so its two lines never collide. */
+  [lang='ur'] h1.text-display,
+  [dir='rtl'] h1.text-display {
+    line-height: 2.1;
+  }
+  [lang='ur'] h2,
+  [dir='rtl'] h2 {
+    line-height: 1.75;
+  }
+  [lang='ur'] h3,
+  [lang='ur'] h4,
+  [dir='rtl'] h3,
+  [dir='rtl'] h4 {
+    line-height: 1.85;
+  }
+  [lang='ur'] p,
+  [lang='ur'] li,
+  [lang='ur'] dd,
+  [dir='rtl'] p,
+  [dir='rtl'] li,
+  [dir='rtl'] dd {
+    line-height: 2;
+  }
+
+  /* Visible, high-contrast focus ring for keyboard users (WCAG). */
+  :focus-visible {
+    @apply outline-none ring-4 ring-ring/40 ring-offset-2 ring-offset-background;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+
+  /* Respect reduced-motion preferences globally. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

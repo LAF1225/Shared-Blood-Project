@@ -1,0 +1,53 @@
+version: 2
+
+# Module 26 §8/§48. Dependency and workflow update monitoring.
+#
+# Grouped so that routine patch traffic arrives as a small number of reviewable
+# pull requests rather than a stream that gets rubber-stamped. Major upgrades
+# are deliberately excluded: Module 26 §45 requires that the Next 16 /
+# next-intl 4 / Vitest 4 modernization be handled as its own module with a full
+# regression, not as an incidental dependency bump during deployment.
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies, security]
+    commit-message:
+      prefix: 'deps'
+      prefix-development: 'deps-dev'
+    groups:
+      production-patches:
+        applies-to: version-updates
+        dependency-type: production
+        update-types: [patch, minor]
+      development-patches:
+        applies-to: version-updates
+        dependency-type: development
+        update-types: [patch, minor]
+      # Security fixes are grouped separately so they are never buried in
+      # routine version-update noise.
+      security-updates:
+        applies-to: security-updates
+        patterns: ['*']
+    ignore:
+      # Handle these as a dedicated modernization module (§45).
+      - dependency-name: next
+        update-types: [version-update:semver-major]
+      - dependency-name: next-intl
+        update-types: [version-update:semver-major]
+      - dependency-name: vitest
+        update-types: [version-update:semver-major]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
+    labels: [ci, security]
+    commit-message:
+      prefix: 'ci'

@@ -1,0 +1,2111 @@
+{
+  "Common": {
+    "appName": "Shared Blood",
+    "tagline": "Understanding Genetics. Supporting Families. Building Healthier Futures.",
+    "skipToContent": "Skip to main content",
+    "loading": "Loading…",
+    "language": "Language",
+    "english": "English",
+    "urdu": "اردو",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Nav": {
+    "home": "Home",
+    "diseases": "Disease Library",
+    "genetics": "Genetics Explorer",
+    "map": "Pakistan Map",
+    "resources": "Resources",
+    "survey": "Survey",
+    "hospitals": "Hospitals",
+    "downloads": "Downloads",
+    "about": "About",
+    "contact": "Contact",
+    "primaryLabel": "Primary",
+    "mobileLabel": "Mobile",
+    "footerLabel": "Footer",
+    "breadcrumbLabel": "Breadcrumb",
+    "menu": "Menu",
+    "earlySigns": "Early Signs",
+    "careSupport": "Care & Support",
+    "geneticTesting": "Genetic Testing",
+    "community": "Community",
+    "research": "Research",
+    "policy": "Policy",
+    "groupLearn": "Learn",
+    "groupGenetics": "Genetics",
+    "aboutSharedBlood": "About Shared Blood",
+    "inheritanceCalculator": "Inheritance Calculator",
+    "dnaExplorer": "DNA Explorer",
+    "punnettSquare": "Punnett Square",
+    "relationshipExplorer": "Relationship Explorer"
+  },
+  "Diseases": {
+    "beta-thalassemia": "Beta Thalassemia",
+    "cystic-fibrosis": "Cystic Fibrosis",
+    "lysosomal-storage-disorders": "Lysosomal Storage Disorders",
+    "ehlers-danlos-syndrome": "Ehlers-Danlos Syndrome"
+  },
+  "Search": {
+    "open": "Search",
+    "title": "Search",
+    "placeholder": "Search Shared Blood…",
+    "submit": "Search",
+    "close": "Close search",
+    "hint": "Search across diseases, genetics tools, and resources.",
+    "resultsFor": "Results for",
+    "emptyQueryTitle": "Search Shared Blood",
+    "emptyQueryBody": "Enter a term above to search the platform.",
+    "comingSoonTitle": "Search is coming soon",
+    "comingSoonBody": "Full search results will be available in a future update. In the meantime, use the navigation to explore diseases, the Genetics Explorer, and resources."
+  },
+  "Home": {
+    "hero": {
+      "kicker": "Public health education",
+      "heading": "Understanding inherited genetic disorders, together",
+      "mission": "Shared Blood helps families, caregivers, and communities across Pakistan understand inherited genetic disorders through clear, compassionate, evidence-based education.",
+      "primaryCta": "Explore Disease Library",
+      "secondaryCta": "Try the Genetics Explorer"
+    },
+    "intro": {
+      "kicker": "About the initiative",
+      "title": "About Shared Blood",
+      "paragraph": "Inherited genetic disorders affect thousands of families in Pakistan. Shared Blood is an independent educational initiative that explains the science of inheritance in plain language, raises public awareness, and connects caregivers with community resources, so that every family can recognise early signs and make informed decisions with confidence.",
+      "objectivesTitle": "What we aim to do",
+      "objectives": [
+        "Explain genetics in simple, accessible language.",
+        "Help families recognise early symptoms.",
+        "Encourage timely medical evaluation.",
+        "Connect caregivers with trusted resources.",
+        "Support community awareness across Pakistan."
+      ],
+      "disclaimer": "Shared Blood is an educational resource only. It does not provide medical diagnosis or advice. Always consult a qualified healthcare professional."
+    },
+    "diseases": {
+      "kicker": "What we cover",
+      "title": "Disease Library",
+      "subtitle": "Start with the conditions covered in our first release.",
+      "summaryPlaceholder": "Learn how this condition is inherited, how to recognise it early, and where to find care and support.",
+      "learnMore": "Learn more"
+    },
+    "genetics": {
+      "kicker": "Interactive learning",
+      "title": "Genetics Explorer",
+      "subtitle": "Interactive, educational tools that make inheritance easier to understand.",
+      "tool1Title": "Inheritance Probability Calculator",
+      "tool1Desc": "Visualise how a condition may pass from parents to children.",
+      "tool2Title": "Relationship & Recessive Risk Explorer",
+      "tool2Desc": "Understand how shared ancestry relates to recessive inheritance.",
+      "openCalculator": "Open calculator"
+    },
+    "map": {
+      "kicker": "Across Pakistan",
+      "title": "Pakistan Genetic Disorder Evidence Map",
+      "description": "Explore where evidence about inherited genetic disorders has actually been documented across Pakistan, and where the data is still missing.",
+      "exploreMap": "Explore the evidence map",
+      "previewAlt": "Simplified map of Pakistan with glowing points marking documented genetic-disorder evidence",
+      "previewBadge": "Preview"
+    },
+    "stats": {
+      "kicker": "Our progress",
+      "title": "Building awareness, step by step",
+      "subtitle": "A snapshot of the Shared Blood initiative. Figures update as the platform grows."
+    },
+    "community": {
+      "kicker": "How we work",
+      "title": "Three pillars of Shared Blood",
+      "subtitle": "Education, community, and research working together.",
+      "learnMore": "Learn more",
+      "education": {
+        "title": "Education",
+        "items": [
+          "Educational website",
+          "Learning materials",
+          "Public awareness"
+        ]
+      },
+      "community": {
+        "title": "Community",
+        "items": [
+          "NGO partnerships",
+          "Caregiver education",
+          "Hospital collaboration"
+        ]
+      },
+      "research": {
+        "title": "Research",
+        "items": [
+          "Awareness survey",
+          "Public reports",
+          "Future policy recommendations"
+        ]
+      }
+    },
+    "resources": {
+      "kicker": "For families",
+      "title": "For parents & caregivers",
+      "subtitle": "Practical resources to support everyday care.",
+      "cta": "Visit the Parent Learning Centre"
+    },
+    "survey": {
+      "kicker": "Get involved",
+      "title": "Share your voice",
+      "explanation": "Our anonymous awareness survey helps us understand what communities know about inherited genetic disorders.",
+      "importance": "Your participation shapes better educational resources and future public health reports.",
+      "cta": "Take the survey"
+    }
+  },
+  "DiseaseLibrary": {
+    "kicker": "Disease Library",
+    "title": "Explore inherited genetic disorders",
+    "subtitle": "Browse the conditions covered on Shared Blood. Search by name or filter by category to find educational information.",
+    "searchLabel": "Search diseases",
+    "searchPlaceholder": "Search by disease name…",
+    "clearSearch": "Clear search",
+    "filterLabel": "Filter by category",
+    "categories": {
+      "all": "All",
+      "blood": "Blood Disorders",
+      "respiratory": "Respiratory Disorders",
+      "connectiveTissue": "Connective Tissue Disorders",
+      "metabolic": "Metabolic Disorders",
+      "rare": "Rare Diseases",
+      "inherited": "Inherited Disorders"
+    },
+    "featuredTitle": "Featured diseases",
+    "featuredBadge": "Featured",
+    "allTitle": "All diseases",
+    "resultsTitle": "Results",
+    "resultsCount": "{count, plural, =0 {No diseases} one {# disease} other {# diseases}}",
+    "bodySystemLabel": "Body system",
+    "relatedLabel": "Related",
+    "learnMore": "Learn more",
+    "noResultsTitle": "No diseases found",
+    "noResultsBody": "Try a different search term or clear the filters to see all diseases.",
+    "clearFilters": "Clear filters",
+    "disclaimer": "The Disease Library is an educational resource only. It does not provide medical diagnosis, treatment, or advice. Always consult a qualified healthcare professional.",
+    "relatedResourcesTitle": "Continue exploring",
+    "relatedResourcesSubtitle": "Keep learning with these related tools and resources.",
+    "resourceGenetics": "Genetics Explorer",
+    "resourceGeneticsDesc": "See how inherited conditions pass through families.",
+    "resourceMap": "Pakistan Map",
+    "resourceMapDesc": "Explore disorders and care across provinces.",
+    "resourceResources": "Parent Resources",
+    "resourceResourcesDesc": "Practical guidance for families and caregivers.",
+    "resourceSurvey": "Awareness Survey",
+    "resourceSurveyDesc": "Share your voice to shape better resources."
+  },
+  "DiseasePage": {
+    "onThisPage": "On this page",
+    "lastUpdatedPrefix": "Last updated",
+    "comingSoonTitle": "Detailed information is coming soon",
+    "comingSoonBody": "Full educational content for this condition (symptoms, inheritance, diagnosis, treatment, and family guidance) is being prepared and will appear here in a future update.",
+    "sections": {
+      "quickFacts": "Quick facts",
+      "emergency": "Emergency signs: seek care now",
+      "about": "About the disease",
+      "earlySymptoms": "Early signs & symptoms",
+      "hiddenSymptoms": "Symptoms families often miss",
+      "inheritance": "Inheritance",
+      "diagnosis": "Diagnosis",
+      "treatment": "Treatment & management",
+      "livingWith": "Living with this disorder",
+      "parentGuidance": "Caring for your child",
+      "growthOutlook": "Growing up & looking ahead",
+      "specialists": "Specialists & healthcare resources",
+      "stories": "Stories & perspectives",
+      "faq": "Frequently asked questions",
+      "research": "Research updates",
+      "references": "References",
+      "related": "Related diseases",
+      "navigation": "Continue exploring"
+    },
+    "quickFacts": {
+      "bodySystem": "Primary body system",
+      "inheritance": "Inheritance pattern",
+      "category": "Category",
+      "prevalence": "Prevalence"
+    },
+    "references": {
+      "source": "View source"
+    },
+    "research": {
+      "readMore": "Read more"
+    },
+    "nav": {
+      "previous": "Previous",
+      "next": "Next",
+      "backToLibrary": "Back to Disease Library",
+      "genetics": "Genetics Explorer",
+      "resources": "Resources"
+    },
+    "explore": {
+      "heading": "Explore the genetics of this condition",
+      "intro": "Educational tools to understand the gene, how the condition is inherited, and where evidence has been documented. These do not diagnose or predict anyone's health.",
+      "dna": {
+        "title": "See the gene and how it works",
+        "description": "Step through the DNA Explorer to see the gene connected to this condition."
+      },
+      "calculator": {
+        "title": "Understand how it is inherited",
+        "description": "Open the Inheritance Calculator with this condition selected."
+      },
+      "map": {
+        "title": "See documented evidence in Pakistan",
+        "description": "View where evidence about inherited disorders has been documented."
+      }
+    }
+  },
+  "Learning": {
+    "kicker": "Parent Learning Centre",
+    "title": "Practical guidance for families and caregivers",
+    "subtitle": "Educational resources on caregiving, early recognition, child development, and supporting your family, in plain language.",
+    "searchLabel": "Search resources",
+    "searchPlaceholder": "Search guides, booklets, and topics…",
+    "clearSearch": "Clear search",
+    "filterLabel": "Filter by category",
+    "categories": {
+      "all": "All",
+      "understandingGenetics": "Understanding Genetic Disorders",
+      "earlySymptoms": "Recognising Early Symptoms",
+      "caringForChild": "Caring for Your Child",
+      "childDevelopment": "Child Development",
+      "medicalAppointments": "Medical Appointments",
+      "schoolEducation": "School & Education",
+      "emotionalSupport": "Emotional Support"
+    },
+    "formats": {
+      "pdf": "PDF",
+      "infographic": "Infographic",
+      "checklist": "Checklist",
+      "poster": "Poster"
+    },
+    "sections": {
+      "featured": "Featured resources",
+      "caregiverGuides": "Caregiver guides",
+      "development": "Child development",
+      "results": "Results",
+      "faq": "Frequently asked questions",
+      "downloads": "Downloads",
+      "relatedDiseases": "Explore related conditions"
+    },
+    "resultsCount": "{count, plural, =0 {No resources} one {# resource} other {# resources}}",
+    "readResource": "Read resource",
+    "noResultsTitle": "No resources found",
+    "noResultsBody": "Try a different search term or clear the filters to see all resources.",
+    "clearFilters": "Clear filters",
+    "downloadsSubtitle": "Printable materials to support you at home. Files become available in the Downloads Centre.",
+    "relatedDiseasesSubtitle": "Learn more about the conditions covered on Shared Blood.",
+    "download": "Download",
+    "downloadComingSoon": "Available soon",
+    "downloadPreparedHint": "Files are managed in the Downloads Centre",
+    "page": {
+      "version": "Version",
+      "updated": "Updated",
+      "content": "About this resource",
+      "practicalGuidance": "Practical guidance",
+      "keyTakeaways": "Key takeaways",
+      "relatedResources": "Related resources",
+      "downloads": "Downloads",
+      "relatedDiseases": "Related conditions",
+      "continue": "Continue exploring",
+      "backToCentre": "Back to Learning Centre",
+      "diseaseLibrary": "Disease Library"
+    }
+  },
+  "Genetics": {
+    "kicker": "Genetics Explorer",
+    "title": "Explore how genetics works",
+    "subtitle": "Interactive, plain-language tools that make DNA, inheritance, and genetic risk easier to understand. Learn the basics, then try the tools.",
+    "callout": {
+      "title": "Educational tools, not medical advice",
+      "body": "The Genetics Explorer is designed for learning. Its tools illustrate general genetic concepts and do not diagnose conditions or predict what will happen in any specific family. Always consult a qualified healthcare professional or genetic counsellor."
+    },
+    "intro": {
+      "heading": "Genetics basics",
+      "subtitle": "A quick introduction before you begin. These ideas appear throughout the tools below."
+    },
+    "tools": {
+      "heading": "Genetics tools",
+      "subtitle": "Each tool is a self-contained educational experience. Open one to see how it works.",
+      "available": "Available",
+      "comingSoon": "Coming soon",
+      "open": "Open tool",
+      "preview": "Preview"
+    },
+    "pathway": {
+      "heading": "Suggested learning path",
+      "subtitle": "A recommended order, but you can explore in any order you like."
+    },
+    "platform": {
+      "heading": "Continue across Shared Blood",
+      "subtitle": "The Explorer connects to the rest of the platform, so keep learning wherever you like."
+    },
+    "toolPage": {
+      "overview": "Overview",
+      "purpose": "Purpose",
+      "interactiveTool": "Interactive tool",
+      "explanation": "Educational explanation",
+      "interpretation": "Understanding the results",
+      "demonstrates": "What this tool shows",
+      "resultsMean": "What the results mean",
+      "resultsDoNotMean": "What the results do not mean",
+      "limitations": "Limitations",
+      "relatedResources": "Related resources",
+      "relatedDiseases": "Related conditions",
+      "references": "References",
+      "sourceLabel": "View source",
+      "comingSoonTitle": "This tool is coming soon",
+      "comingSoonBody": "We are building this educational experience. In the meantime, explore the tools and introduction already available.",
+      "interactivePendingTitle": "Interactive tool coming soon",
+      "interactivePendingBody": "The interactive tool is being prepared and will appear here in a future update. The educational explanation below describes what it will show.",
+      "continue": "Continue exploring",
+      "backToExplorer": "Back to Genetics Explorer"
+    },
+    "connections": {
+      "heading": "Continue learning",
+      "calcToPunnett": {
+        "title": "See it as a Punnett square",
+        "description": "Visualise how the same possible combinations build these probabilities."
+      },
+      "calcToDna": {
+        "title": "Explore the gene involved",
+        "description": "See how a change connected to a gene can affect the body."
+      },
+      "dnaToCalc": {
+        "title": "See how it is inherited",
+        "description": "Use the Inheritance Calculator to explore recessive and dominant patterns."
+      },
+      "punnettToCalc": {
+        "title": "Try different parent statuses",
+        "description": "Open the Inheritance Calculator to change the inputs and compare outcomes."
+      },
+      "punnettToRelationship": {
+        "title": "Relationship and genotype are different",
+        "description": "See why being related does not tell us whether two people share a variant."
+      },
+      "relationshipToPunnett": {
+        "title": "See a hypothetical Punnett square",
+        "description": "Explore an explicit, hypothetical inheritance scenario."
+      },
+      "relationshipToCalc": {
+        "title": "Explore inheritance separately",
+        "description": "Genetic status is separate from relationship; open the calculator to explore inheritance itself."
+      },
+      "mapToDiseases": {
+        "title": "Read about the conditions",
+        "description": "Open the disease library for plain-language education on each condition."
+      },
+      "mapToGenetics": {
+        "title": "Learn how inheritance works",
+        "description": "Visit the Genetics Explorer for general inheritance education."
+      }
+    }
+  },
+  "InheritanceCalculator": {
+    "disclaimer": {
+      "title": "An educational tool, not a diagnosis",
+      "body": "This calculator demonstrates simplified inheritance only when the inheritance pattern and both parents' relevant genetic statuses are known. It does not diagnose a condition, determine carrier status, interpret genetic test results, or calculate anyone's complete genetic risk. Discuss genetic test results and family-specific risk with a qualified healthcare professional or genetic counsellor."
+    },
+    "disease": {
+      "legend": "1. Choose a condition",
+      "help": "The condition determines which inheritance model applies. Some conditions depend on the specific subtype."
+    },
+    "subtype": {
+      "legend": "2. Choose a subtype",
+      "help": "This condition's inheritance depends on the subtype, so a subtype must be chosen."
+    },
+    "patternLabel": "Inheritance pattern",
+    "strategy": {
+      "autosomal-recessive": "Autosomal recessive",
+      "autosomal-dominant": "Autosomal dominant"
+    },
+    "parentOne": {
+      "legend": "Parent one: known genetic status"
+    },
+    "parentTwo": {
+      "legend": "Parent two: known genetic status"
+    },
+    "statuses": {
+      "autosomal-recessive": {
+        "affected": {
+          "label": "Affected",
+          "definition": "Two altered gene copies (aa)."
+        },
+        "carrier": {
+          "label": "Carrier",
+          "definition": "One altered, one typical copy (Aa). Usually no symptoms."
+        },
+        "tested-negative": {
+          "label": "Tested negative",
+          "definition": "No disease-causing variant detected by this model (AA)."
+        }
+      },
+      "autosomal-dominant": {
+        "affected": {
+          "label": "Affected",
+          "definition": "One variant copy (Aa). Modelled as affected under dominant inheritance."
+        },
+        "unaffected": {
+          "label": "Unaffected",
+          "definition": "Two typical copies (aa)."
+        }
+      }
+    },
+    "calculate": "Calculate inheritance",
+    "reset": "Reset",
+    "errors": {
+      "condition-missing": "Please select a disorder or supported subtype before calculating inheritance.",
+      "subtype-required": "Please select a supported subtype before calculating inheritance.",
+      "parent-one-missing": "Please select the required genetic status of parent one.",
+      "parent-two-missing": "Please select the required genetic status of parent two.",
+      "combination-unsupported": "This parental combination requires condition-specific inheritance information and is not supported by the current simplified model."
+    },
+    "unsupported": {
+      "heading": "This condition can't be modelled here",
+      "diseaseInfo": "Educational content"
+    },
+    "unknown": {
+      "title": "Not sure of a parent's genetic status?",
+      "body": "This calculator needs the known genetic status of both parents. It cannot estimate carrier or affected status, or infer a genotype from relationship or population data. These pages can help:",
+      "exploreGenetics": "Genetics Explorer",
+      "populationRisk": "Relationship & Recessive Risk Explorer",
+      "diseaseInfo": "Disease information"
+    },
+    "results": {
+      "heading": "Results for each pregnancy",
+      "summary": "Based on parent one ({one}) and parent two ({two}).",
+      "perPregnancyTitle": "These chances apply to each pregnancy",
+      "perPregnancyBody": "Each pregnancy is a separate, independent inheritance event with the same modelled chance. A percentage does not mean that exact fraction of a family's children will be affected."
+    },
+    "outcomes": {
+      "affected": {
+        "label": "Affected",
+        "explanation": "A child who inherits two altered copies (one from each parent) and is modelled as affected by the condition."
+      },
+      "carrier": {
+        "label": "Carrier",
+        "explanation": "A child who inherits one altered and one typical copy. Carriers usually have no symptoms but can pass the altered copy on."
+      },
+      "unaffected": {
+        "label": "Unaffected",
+        "explanation": "A child who inherits two typical copies, neither affected nor carrying the altered copy represented by this model."
+      },
+      "inherits-variant": {
+        "label": "Inherits the variant",
+        "explanation": "A child who inherits the dominant variant and is modelled as affected under this simplified dominant model."
+      },
+      "not-inherited": {
+        "label": "Does not inherit",
+        "explanation": "A child who does not inherit the dominant variant and is modelled as unaffected."
+      }
+    },
+    "viz": {
+      "heading": "Inheritance combinations",
+      "caption": "Each parent passes on one allele. These are the four equally likely combinations for a child:",
+      "parentOne": "Parent one",
+      "parentTwo": "Parent two",
+      "textEquivalent": "Possible child combinations"
+    },
+    "context": {
+      "heading": "About this condition",
+      "viewPage": "Read the full {disease} page"
+    }
+  },
+  "RelationshipExplorer": {
+    "disclaimer": {
+      "title": "An educational explorer, not a risk calculator",
+      "body": "This tool explains why shared ancestry can raise the chance that both parents carry the same recessive variant. It does not calculate an individual couple's risk of a specific disease, infer anyone's genetic status, or provide a diagnosis. It uses neutral, educational language and makes no judgment about marriage."
+    },
+    "relationship": {
+      "legend": "Select a biological relationship",
+      "help": "Choose a biological relationship category to explore its genetics. This tool makes no social, religious, or legal judgment about marriage."
+    },
+    "emptyState": "Select a biological relationship above to see its Relationship Genetics Profile.",
+    "profileHeading": "Relationship Genetics Profile",
+    "sections": {
+      "pedigree": "Pedigree",
+      "howRelated": "How you are related",
+      "sharedAncestry": "Shared ancestry",
+      "coefficient": "Expected pedigree coefficient",
+      "recessiveSharing": "How recessive variants can be shared",
+      "populationContext": "Population-level context",
+      "diseaseContext": "Disease context",
+      "cannotTell": "What this cannot tell you",
+      "moreSpecific": "What gives more specific information?",
+      "references": "References",
+      "scenario": "See an inheritance scenario"
+    },
+    "coefficient": {
+      "meaning": "The inbreeding coefficient (F) estimates the probability that, at a given point in the genome, a child inherits two copies of an allele that came from the same shared ancestor. It is not the chance of having a genetic disorder.",
+      "complexLimit": "This value represents the expected coefficient for the selected simple relationship pattern. A real family pedigree (with repeated cousin marriages or several shared ancestors) may produce a different value.",
+      "unrelatedTitle": "No simple-pedigree coefficient",
+      "unrelatedBody": "This selection represents no known recent shared ancestry, so a simple-pedigree coefficient is not shown. Distant or population-level relatedness may still exist, and everyone carries some recessive variants."
+    },
+    "pedigree": {
+      "sharedAncestor": "Shared ancestor(s)",
+      "ancestorLine": "Ancestor line",
+      "parentOne": "Parent one",
+      "parentTwo": "Parent two",
+      "child": "Child",
+      "variantPath": "Example variant path (hypothetical)",
+      "hypotheticalNote": "This is an educational example. It does not mean the ancestor actually carried a disease-causing variant.",
+      "alleleLegend": "a = an example recessive variant"
+    },
+    "evidence": {
+      "population": "Population / study context",
+      "outcome": "Outcome measured",
+      "estimate": "Estimate",
+      "estimateType": "What kind of estimate",
+      "notConfigured": "A single population-level risk estimate is not provided for this relationship category."
+    },
+    "disease": {
+      "legend": "Optional: choose a disease context",
+      "help": "This changes the educational explanation only. It does not change the coefficient or produce a disease-specific probability.",
+      "viewPage": "Read the full {disease} page"
+    },
+    "cannotTell": {
+      "body": "Relationship category alone cannot tell you whether two people carry the same disease-causing variant. More specific context depends on family history, known familial disease, carrier status, genetic testing, the specific disease or gene, and complex pedigrees."
+    },
+    "moreSpecific": {
+      "relationship": {
+        "label": "Relationship category",
+        "detail": "General shared-ancestry context (this Explorer)."
+      },
+      "familyHistory": {
+        "label": "Family history",
+        "detail": "More family-specific context."
+      },
+      "testing": {
+        "label": "Carrier or genetic testing",
+        "detail": "Known genetic status."
+      },
+      "knownStatus": {
+        "label": "Known parent genetic status",
+        "detail": "Simplified Mendelian probabilities in the Inheritance Probability Calculator."
+      }
+    },
+    "module09": {
+      "title": "Know both parents' genetic status?",
+      "cta": "Explore inheritance probabilities"
+    },
+    "viewSource": "View source",
+    "reset": "Reset",
+    "scenario": {
+      "notGenotypeTitle": "Relationship alone does not tell us genotype",
+      "notGenotypeBody": "Being related does not tell us whether two people carry the same variant. The scenarios below are explicit, hypothetical examples; they are not based on your relationship, and they never estimate a real couple's risk.",
+      "intro": "To understand how inheritance works, choose a hypothetical scenario and view its Punnett square."
+    }
+  },
+  "Footer": {
+    "disclaimer": "Shared Blood is an educational resource and does not provide medical diagnosis or advice. Always consult a qualified healthcare professional.",
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "contactEmail": "sharedblood.org@gmail.com",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "comingSoon": "Coming soon",
+    "rights": "All rights reserved.",
+    "ethics": "Research ethics",
+    "governance": "Research governance"
+  },
+  "Errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for does not exist or has moved.",
+    "genericTitle": "Something went wrong",
+    "genericBody": "An unexpected error occurred. Please try again.",
+    "retry": "Try again",
+    "backHome": "Return home"
+  },
+  "PakistanMap": {
+    "intro": {
+      "title": "This is an evidence map, not a prevalence map",
+      "body": "This map shows where evidence about inherited genetic disorders has been documented in Pakistan. More evidence in a place often reflects hospitals, laboratories, or research activity; it does not necessarily mean the disorder is more common there."
+    },
+    "map": {
+      "accessibleIntro": "Interactive map showing locations associated with documented genetic-disorder evidence in the Shared Blood dataset. An equivalent evidence list is available below.",
+      "ariaLabel": "Map of Pakistan showing documented genetic-disorder evidence locations",
+      "title": "Pakistan Genetic Disorder Evidence Map",
+      "description": "A simplified map of Pakistan with markers at locations where genetic-disorder evidence has been documented. Each marker is keyboard-selectable; an equivalent evidence list appears below.",
+      "markerLabel": "{location}: {count, plural, one {# evidence record} other {# evidence records}}. Select to view.",
+      "caption": "Markers show documented evidence records, not confirmed disease prevalence."
+    },
+    "filters": {
+      "disease": "Disease",
+      "allEvidence": "All evidence",
+      "evidenceType": "Evidence type",
+      "allTypes": "All evidence types",
+      "province": "Province or territory",
+      "allProvinces": "All provinces & territories",
+      "search": "Search",
+      "searchPlaceholder": "Location, institution, or study…"
+    },
+    "evidenceTypes": {
+      "POPULATION_STUDY": "Population study",
+      "SCREENING_STUDY": "Screening study",
+      "HOSPITAL_COHORT": "Hospital cohort",
+      "PATIENT_COHORT": "Patient cohort",
+      "GENETIC_STUDY": "Genetic study",
+      "MUTATION_STUDY": "Mutation study",
+      "REGISTRY": "Registry",
+      "CASE_SERIES": "Case series",
+      "INSTITUTIONAL_DATA": "Institutional data"
+    },
+    "count": {
+      "records": "{count, plural, one {# evidence record} other {# evidence records}}",
+      "explanation": "Evidence count reflects records currently documented in Shared Blood. It does not represent the number of patients or the total disease burden in a location."
+    },
+    "coverage": {
+      "label": "Dataset coverage",
+      "explanation": "Coverage describes how complete the Shared Blood evidence dataset is for this disorder, not disease severity, risk, or prevalence.",
+      "LIMITED": "Limited",
+      "DEVELOPING": "Developing",
+      "EXPANDED": "Expanded"
+    },
+    "reset": "Reset filters",
+    "cluster": {
+      "heading": "{location}: {count, plural, one {# evidence record} other {# evidence records}}",
+      "note": "This is the number of evidence records documented at this location, not a patient count, disease severity, or prevalence. Select a record to read it."
+    },
+    "detail": {
+      "hint": "Select a marker on the map or a record in the list to see the evidence details.",
+      "disease": "Disease",
+      "evidenceType": "Evidence type",
+      "studyPopulation": "Study population",
+      "sampleSize": "Sample size",
+      "studyPeriod": "Study period",
+      "institution": "Institution",
+      "measured": "Evidence summary",
+      "whatMeasured": "What was measured?",
+      "whatReported": "What was reported?",
+      "estimateType": "Estimate type",
+      "canTell": "What this evidence can tell us",
+      "cannotTell": "What this evidence cannot tell us",
+      "limitations": "Data limitations",
+      "source": "Source",
+      "viewSource": "View source",
+      "viewDisease": "Read about {disease}"
+    },
+    "list": {
+      "ariaLabel": "Evidence records",
+      "title": "Evidence list"
+    },
+    "empty": {
+      "layerTitle": "No geographic evidence records are currently available",
+      "layerBody": "No geographic evidence records are currently available in the Shared Blood dataset for this condition. This does not mean the condition is absent from Pakistan. It means that no location-based evidence has currently been added to this map.",
+      "filterTitle": "No evidence records match the current filters",
+      "filterBody": "This result reflects the current Shared Blood evidence dataset and does not mean the selected disorder is absent from the selected location.",
+      "reset": "Reset filters"
+    },
+    "dataGaps": {
+      "title": "Where is the data missing?",
+      "body": "A blank area on this map does not necessarily mean genetic disorders are absent. It may reflect limited screening, diagnosis, research, registry coverage, or published data. Showing these gaps is part of the map's purpose."
+    },
+    "crossLinks": {
+      "title": "Continue exploring",
+      "calculator": "Inheritance Probability Calculator",
+      "relationship": "Relationship & Recessive Risk Explorer"
+    },
+    "legend": {
+      "title": "Map legend",
+      "marker": {
+        "label": "Evidence marker",
+        "desc": "one or more documented evidence records at a location"
+      },
+      "cluster": {
+        "label": "Evidence cluster",
+        "desc": "several evidence records grouped at the same location; the number is the record count"
+      },
+      "selected": {
+        "label": "Selected marker",
+        "desc": "the marker you are currently viewing"
+      },
+      "disclaimer": "Map markers represent documented evidence records, not confirmed disease prevalence hotspots."
+    }
+  },
+  "Stories": {
+    "types": {
+      "PATIENT_PERSPECTIVE": "Patient perspective",
+      "PARENT_PERSPECTIVE": "Parent perspective",
+      "CAREGIVER_PERSPECTIVE": "Caregiver perspective",
+      "DOCTOR_PERSPECTIVE": "Doctor perspective",
+      "GENETIC_COUNSELLOR_PERSPECTIVE": "Genetic counsellor perspective",
+      "RESEARCHER_PERSPECTIVE": "Researcher perspective",
+      "CHILD_CARE_WORKER_PERSPECTIVE": "Child-care professional perspective"
+    },
+    "identity": {
+      "anonymous": "Anonymous contributor",
+      "pseudonym": "name changed",
+      "memorial": "shared in memory"
+    },
+    "featured": "Featured",
+    "audioLanguage": {
+      "label": "Audio language",
+      "en": "English",
+      "ur": "Urdu",
+      "mixed": "Urdu and English"
+    },
+    "audio": {
+      "play": "Play recording",
+      "pause": "Pause recording",
+      "seek": "Seek through recording",
+      "speed": "Speed",
+      "volume": "Volume",
+      "error": "This recording is currently unavailable. You can still read the transcript below."
+    },
+    "transcript": {
+      "show": "Show transcript",
+      "hide": "Hide transcript",
+      "title": "Transcript",
+      "original": "Original",
+      "translated": "Translated",
+      "versionLabel": "Transcript version",
+      "translationNote": "This is a translation provided for readability, not a word-for-word transcription.",
+      "error": "The transcript is currently unavailable."
+    },
+    "contentNotices": {
+      "label": "Content notice",
+      "infant-illness": "infant illness",
+      "hospitalization": "hospitalization",
+      "bereavement": "bereavement",
+      "diagnostic-delay": "diagnostic delay",
+      "family-stress": "family stress"
+    },
+    "selector": {
+      "label": "Filter perspectives",
+      "all": "All perspectives",
+      "patients": "Patients",
+      "parents-caregivers": "Parents & caregivers",
+      "professionals": "Healthcare professionals"
+    },
+    "disclaimer": {
+      "title": "About these stories",
+      "body": "These are personal and professional experiences shared with consent. Individual and professional perspectives may differ and are not medical advice or a substitute for the scientific information on this page."
+    }
+  },
+  "EarlySigns": {
+    "title": "Early Signs & Care Guidance",
+    "subtitle": "Educational guidance to help you notice patterns in a child and understand when it may be worth seeking professional assessment.",
+    "notChecker": {
+      "title": "This is educational guidance, not a symptom checker",
+      "body": "This section helps you learn what to observe and when to seek professional assessment. It does not diagnose, predict a disease, or tell you what condition a child has. Only a qualified professional can assess a child."
+    },
+    "patternEducation": {
+      "title": "Why patterns matter",
+      "body": "One sign on its own can have many causes. Doctors often consider the child's overall pattern, medical history, development, examination, and test results."
+    },
+    "emergency": {
+      "title": "When to seek urgent medical help",
+      "intro": "Some signs need urgent care regardless of any genetic condition. If a child shows any of the following, seek help straight away.",
+      "action": "Seek urgent medical care at the nearest available emergency service or healthcare facility."
+    },
+    "chooser": {
+      "legend": "Choose a disease to learn about",
+      "help": "Start by choosing a condition. This system is disease-first: you choose a topic to learn about, and it never tries to identify a disease from observations.",
+      "prompt": "Choose a condition above to see its educational early-sign guidance."
+    },
+    "viewDiseasePage": "Read the full page about {disease}",
+    "filters": {
+      "age": "Age context",
+      "allAges": "All childhood signs",
+      "category": "Observation category",
+      "allCategories": "All categories",
+      "search": "Search",
+      "searchPlaceholder": "Search signs (e.g. tiredness, cough)…",
+      "reset": "Reset filters"
+    },
+    "count": "{count, plural, one {# early-sign guidance record} other {# early-sign guidance records}}",
+    "ages": {
+      "NEWBORN": "Newborn",
+      "INFANT": "Infancy",
+      "TODDLER": "Toddler years",
+      "YOUNG_CHILD": "Young children",
+      "GENERAL_CHILDHOOD": "General childhood"
+    },
+    "categories": {
+      "GROWTH": "Growth",
+      "FEEDING": "Feeding",
+      "BREATHING": "Breathing",
+      "DIGESTION": "Digestion",
+      "MOVEMENT": "Movement",
+      "MUSCLE_TONE": "Muscle tone",
+      "JOINTS": "Joints",
+      "SKIN": "Skin",
+      "ENERGY": "Energy",
+      "DEVELOPMENT": "Development",
+      "PAIN_OR_DISCOMFORT": "Pain or discomfort",
+      "INFECTION_PATTERN": "Infection pattern",
+      "APPEARANCE": "Appearance",
+      "BLEEDING_OR_BRUISING": "Bleeding or bruising",
+      "OTHER": "Other"
+    },
+    "patterns": {
+      "SINGLE_OBSERVATION": "Single observation",
+      "PERSISTENT": "Persistent",
+      "RECURRING": "Recurring",
+      "PROGRESSIVE": "Progressive",
+      "COMBINATION_PATTERN": "Combination pattern"
+    },
+    "urgency": {
+      "ROUTINE_DISCUSSION": "Worth discussing with a doctor",
+      "PROMPT_ASSESSMENT": "Arrange medical assessment",
+      "URGENT_MEDICAL_HELP": "Seek urgent medical help"
+    },
+    "card": {
+      "whatYouMayNotice": "What you may notice",
+      "whatNotToAssume": "What not to assume",
+      "clinicalContext": "Clinical context",
+      "whoMayHelp": "Who may be able to help"
+    },
+    "empty": {
+      "title": "No early-sign guidance matches the current filters.",
+      "body": "This does not mean a sign cannot occur. The current view reflects the educational guidance available in Shared Blood.",
+      "reset": "Reset filters"
+    },
+    "devVariation": {
+      "title": "Children develop at different rates",
+      "body": "Children can reach milestones at different times, and a single difference does not automatically indicate a genetic disorder. Persistent concerns, the loss of abilities a child previously had, or several concerning changes together are worth discussing with a healthcare professional."
+    },
+    "professionalsSection": {
+      "title": "Who may be able to help",
+      "note": "These describe general types of professionals and what they do. This is not a directory, and it does not list specific hospitals or people. A professional type does not mean that professional will diagnose the condition."
+    },
+    "appointment": {
+      "title": "Questions to think about before an appointment",
+      "intro": "This is organizational preparation, not a diagnosis, and nothing is stored. It may help to think through:",
+      "whenNoticed": "When you first noticed the concern.",
+      "persistentOrRecurring": "Whether it is persistent, or comes and goes (recurring).",
+      "majorChanges": "Any major changes in feeding, growth, breathing, movement, or energy.",
+      "records": "Any available medical records or previous test results you can bring.",
+      "familyHistory": "Any known family history you are comfortable discussing.",
+      "privacyNote": "Shared Blood does not store any of this. There is no child profile and no health record here."
+    }
+  },
+  "CareSupport": {
+    "title": "Care & Support",
+    "subtitle": "Practical, everyday support for children and families living with an inherited genetic disorder: what may help, what to prepare for, and who to ask.",
+    "notPlanner": {
+      "title": "This is care education, not a treatment plan",
+      "body": "Care & Support explains areas of care that may matter and questions worth asking. It never prescribes treatment, medicines, devices, diets, or exercises, and it does not tell you what your individual child needs. Those decisions belong to your child's care team."
+    },
+    "chooser": {
+      "legend": "Choose a condition",
+      "help": "Care & Support is organised by condition. Choose one to see practical care areas; the system never works out a condition or a care plan for you.",
+      "prompt": "Choose a condition above to see practical care areas, questions to ask, and generic support items."
+    },
+    "viewDiseasePage": "Read the full {disease} page",
+    "toolsHeading": "Preparing for care",
+    "count": "{count, plural, =0 {No care areas} one {# care area} other {# care areas}}",
+    "filters": {
+      "careArea": "Care area",
+      "allAreas": "All care areas",
+      "age": "Age",
+      "allAges": "All ages",
+      "audience": "For",
+      "allAudiences": "All caregivers",
+      "search": "Search",
+      "searchPlaceholder": "Search care areas…",
+      "reset": "Reset filters"
+    },
+    "empty": {
+      "title": "No care guidance matches the current filters.",
+      "body": "Care needs vary from child to child. This view reflects the guidance available in Shared Blood; it does not mean a child does not need additional care.",
+      "reset": "Reset filters"
+    },
+    "card": {
+      "whyItMayMatter": "Why it may matter",
+      "practicalConsiderations": "Practical considerations",
+      "caregiverExpectations": "What caregivers may prepare for",
+      "questionsToAsk": "Questions to ask your care team",
+      "relevantProfessionals": "Professionals who may help",
+      "relatedSupportItems": "{count, plural, one {# related support item} other {# related support items}}",
+      "references": "References"
+    },
+    "supportItem": {
+      "potentialUse": "What it may be used for",
+      "professionalGuidanceNotice": "This type of support should be selected with guidance from an appropriate healthcare professional.",
+      "safety": "Safety",
+      "purchaseGuidance": "Choosing one"
+    },
+    "appointment": {
+      "title": "Appointment preparation guide",
+      "intro": "A generic sheet you can print and fill in at home before a visit. Shared Blood does not save anything you write.",
+      "print": "Print this guide",
+      "privacyNote": "This is a blank template. It does not contain any child's name, diagnosis, or personal information; you complete it offline.",
+      "changes": "What has changed since the last appointment (feeding, movement, breathing, energy, or other concerns)?",
+      "questions": "Questions we want to ask the care team",
+      "medicines": "Current medicines to mention",
+      "recentVisits": "Recent hospital or clinic visits",
+      "observations": "Things we have observed and want to discuss",
+      "nextSteps": "Next steps or follow-up agreed at the visit"
+    },
+    "essential": {
+      "title": "Preparing essential care information",
+      "intro": "In case of a flood, displacement, or emergency, it can help to keep key information ready to share with responsible medical staff. Keep it somewhere safe; Shared Blood does not store it.",
+      "medications": "A simple list of current medicines and any known allergies",
+      "records": "Copies of essential records, such as the diagnosis and recent summaries",
+      "careNeeds": "A short note of the child's major care needs and routines",
+      "communicating": "How to explain the diagnosed condition clearly to relief or emergency medical staff"
+    },
+    "summary": {
+      "intro": "Practical Care & Support guidance for this condition covers {count, plural, one {# care area} other {# care areas}}, from daily routines to questions for your care team.",
+      "cta": "Open Care & Support for this condition"
+    },
+    "domains": {
+      "DAILY_ROUTINE": "Daily routine",
+      "NUTRITION_AWARENESS": "Nutrition awareness",
+      "FEEDING_SUPPORT": "Feeding support",
+      "MOVEMENT_SUPPORT": "Movement support",
+      "JOINT_SUPPORT": "Joint support",
+      "MUSCLE_SUPPORT": "Muscle support",
+      "RESPIRATORY_SUPPORT": "Respiratory support",
+      "DEVELOPMENT_SUPPORT": "Development support",
+      "LEARNING_SUPPORT": "Learning support",
+      "ENERGY_MANAGEMENT": "Energy management",
+      "PAIN_AWARENESS": "Pain awareness",
+      "SKIN_SUPPORT": "Skin support",
+      "SLEEP_SUPPORT": "Sleep support",
+      "INFECTION_AWARENESS": "Infection awareness",
+      "EMOTIONAL_SUPPORT": "Emotional support",
+      "SOCIAL_SUPPORT": "Social support",
+      "SCHOOL_SUPPORT": "School support",
+      "APPOINTMENT_PREPARATION": "Appointment preparation",
+      "MEDICAL_ROUTINE_AWARENESS": "Medical routine awareness",
+      "CAREGIVER_PREPARATION": "Caregiver preparation",
+      "ACCESSIBILITY": "Accessibility",
+      "OTHER": "Other"
+    },
+    "contexts": {
+      "EVERYDAY_SUPPORT": "Everyday support",
+      "DEVELOPMENT_SUPPORT": "Development support",
+      "MEDICAL_ROUTINE_SUPPORT": "Medical routine support",
+      "EDUCATION_SUPPORT": "Education support",
+      "MOBILITY_SUPPORT": "Mobility support",
+      "COMMUNICATION_SUPPORT": "Communication support",
+      "FAMILY_SUPPORT": "Family support",
+      "ENVIRONMENTAL_SUPPORT": "Environmental support"
+    },
+    "ages": {
+      "NEWBORN": "Newborn",
+      "INFANT": "Infancy",
+      "TODDLER": "Toddler years",
+      "YOUNG_CHILD": "Young children",
+      "GENERAL_CHILDHOOD": "General childhood"
+    },
+    "audiences": {
+      "PARENT_OR_GUARDIAN": "Parents & guardians",
+      "CHILD_CARE_WORKER": "Child-care workers",
+      "FAMILY_CAREGIVER": "Family caregivers",
+      "SCHOOL_CAREGIVER": "School staff",
+      "GENERAL_CAREGIVER": "General caregivers"
+    },
+    "supportCategories": {
+      "MOBILITY": "Mobility",
+      "POSITIONING": "Positioning",
+      "FEEDING": "Feeding",
+      "RESPIRATORY": "Respiratory",
+      "JOINT_SUPPORT": "Joint support",
+      "COMFORT": "Comfort",
+      "SCHOOL_ADAPTATION": "School adaptation",
+      "DAILY_LIVING": "Daily living",
+      "ORGANIZATION": "Organisation",
+      "ACCESSIBILITY": "Accessibility",
+      "OTHER": "Other"
+    },
+    "deviceStatus": {
+      "NON_MEDICAL_SUPPORT_ITEM": "Non-medical support item",
+      "PROFESSIONAL_GUIDANCE_RECOMMENDED": "Professional guidance recommended",
+      "PROFESSIONAL_ASSESSMENT_REQUIRED": "Professional assessment required"
+    }
+  },
+  "GeneticTesting": {
+    "title": "Genetic Testing & Counselling",
+    "subtitle": "Understand genetic testing, carrier status, family history, and genetic counselling: the language to make sense of these before you are in a hospital hearing them for the first time.",
+    "references": "References",
+    "learnInheritance": "Learn how inheritance works in the Genetics Explorer",
+    "count": "{count, plural, =0 {No topics} one {# topic} other {# topics}}",
+    "notCompatibility": {
+      "title": "This is education, not a compatibility test",
+      "body": "Shared Blood helps you understand testing, carrier status, and counselling so you can make your own informed decisions. It never approves or rejects couples, never says anyone is “genetically compatible” or “incompatible”, and never tells anyone whether to marry or have children. Consanguineous marriage has real cultural and social significance; genetics education is about information, not judgement."
+    },
+    "library": {
+      "title": "Testing education topics",
+      "intro": "Browse curated topics, or narrow them by context, audience, category, or condition. Choosing a context only filters the education shown; it never works out your personal risk."
+    },
+    "filters": {
+      "context": "Life stage",
+      "allContexts": "All life stages",
+      "audience": "For",
+      "allAudiences": "Everyone",
+      "category": "Testing category",
+      "allCategories": "All categories",
+      "disease": "Condition",
+      "allDiseases": "All conditions",
+      "search": "Search",
+      "searchPlaceholder": "Search testing topics…",
+      "reset": "Reset filters"
+    },
+    "empty": {
+      "title": "No genetic testing education topics match the current filters.",
+      "body": "Testing approaches vary, and this view reflects the education available in Shared Blood. It does not mean you do or do not need genetic testing.",
+      "reset": "Reset filters"
+    },
+    "card": {
+      "whatItIs": "What it is",
+      "whyItMayBeDiscussed": "Why it may be discussed",
+      "whatItCanTellYou": "What it can tell you",
+      "whatItCannotTellYou": "What it cannot tell you",
+      "beforeTesting": "Before testing",
+      "afterTesting": "After testing",
+      "questionsToAsk": "Questions to ask",
+      "relevantProfessionals": "Professionals who may help"
+    },
+    "categories": {
+      "CARRIER_TESTING": "Carrier testing",
+      "DIAGNOSTIC_GENETIC_TESTING": "Diagnostic genetic testing",
+      "FAMILY_VARIANT_TESTING": "Family variant testing",
+      "PRECONCEPTION_TESTING": "Preconception education",
+      "PRENATAL_TESTING_EDUCATION": "Prenatal testing education",
+      "NEWBORN_SCREENING_EDUCATION": "Newborn screening education",
+      "POPULATION_SCREENING_EDUCATION": "Population screening education",
+      "GENETIC_COUNSELLING": "Genetic counselling",
+      "FAMILY_HISTORY_REVIEW": "Family history review",
+      "OTHER": "Other"
+    },
+    "lifeStages": {
+      "GENERAL": "General",
+      "BEFORE_MARRIAGE": "Before marriage",
+      "AFTER_MARRIAGE": "After marriage",
+      "BEFORE_PREGNANCY": "Before pregnancy",
+      "DURING_PREGNANCY": "During pregnancy",
+      "AFTER_CHILD_DIAGNOSIS": "After a child's diagnosis",
+      "AFTER_RELATIVE_DIAGNOSIS": "After a relative's diagnosis"
+    },
+    "audiences": {
+      "GENERAL_PUBLIC": "General public",
+      "INDIVIDUAL": "Individuals",
+      "COUPLE": "Couples",
+      "PARENT_OR_GUARDIAN": "Parents & guardians",
+      "PROSPECTIVE_PARENT": "Prospective parents",
+      "FAMILY_WITH_KNOWN_HISTORY": "Families with a known history",
+      "CAREGIVER": "Caregivers",
+      "CHILD_CARE_WORKER": "Child-care workers"
+    },
+    "screening": {
+      "title": "Screening vs diagnostic testing",
+      "intro": "These are different kinds of test with different purposes. The exact meaning varies by test.",
+      "screeningTitle": "Screening",
+      "screeningBody": "Screening estimates whether there may be an increased chance of a condition. A screening result is not a diagnosis.",
+      "diagnosticTitle": "Diagnostic testing",
+      "diagnosticBody": "Diagnostic testing is used to determine whether a specific condition or finding is present, often after screening or when there is a clinical reason.",
+      "note": "Which test is right, and what a result means, is explained by a healthcare professional in each person's context."
+    },
+    "journey": {
+      "title": "The carrier-testing learning journey",
+      "intro": "A flexible way to build understanding, step by step. It is a learning path, not a personal assessment.",
+      "step1": "What is a carrier?",
+      "step2": "How autosomal recessive inheritance works",
+      "step3": "Why two carrier parents is the context that matters",
+      "step4": "What carrier testing may examine",
+      "step5": "What a result may, and may not, mean",
+      "step6": "Questions to ask before testing",
+      "step7": "How genetic counselling can help you understand your options"
+    },
+    "results": {
+      "title": "Understanding kinds of results",
+      "intro": "These explain what a kind of result may and may not mean in general. Shared Blood never interprets an individual's actual report.",
+      "mayMean": "May mean",
+      "doesNotMean": "Does not mean",
+      "disclaimer": "Meaning depends on the test, the genes and variants, the condition, the clinical context, and current knowledge. Only a qualified professional can explain a specific result."
+    },
+    "counselling": {
+      "title": "What genetic counselling is",
+      "whatMayBeDiscussed": "What may be discussed",
+      "whatItDoesNotDo": "What genetic counselling does not do"
+    },
+    "questions": {
+      "title": "Questions to prepare",
+      "intro": "Conversation prompts to take to a professional. Shared Blood does not answer these for you, and never evaluates a specific laboratory.",
+      "beforeTitle": "Before genetic testing",
+      "afterTitle": "After genetic testing",
+      "providerTitle": "For a testing provider",
+      "before": {
+        "q1": "What condition or genes is this test examining?",
+        "q2": "Why is this test being considered?",
+        "q3": "What results could I receive?",
+        "q4": "Could the result be uncertain?",
+        "q5": "What would a negative result mean for this test, and could it affect biological relatives?"
+      },
+      "after": {
+        "q1": "What does this result mean in my clinical context?",
+        "q2": "Does it confirm a diagnosis or carrier status?",
+        "q3": "Are additional tests sometimes considered?",
+        "q4": "Could it be relevant to biological relatives, and who can explain it?"
+      },
+      "provider": {
+        "q1": "What test is being performed?",
+        "q2": "Which genes or variants are examined?",
+        "q3": "Who interprets the result?",
+        "q4": "Will I receive a written report, how is my information stored, and who can access it?",
+        "q5": "Is genetic counselling available?"
+      }
+    },
+    "familyGuide": {
+      "title": "Family history preparation guide",
+      "intro": "A generic checklist to gather background privately before speaking with a professional. You keep it; nothing is submitted to Shared Blood.",
+      "print": "Print this guide",
+      "privacyNote": "This is a blank template. It does not include any calculator results, relationship selections, names, or genetic status; you complete it privately and offline.",
+      "diagnosed": "Known genetic diagnoses in the family",
+      "carrierStatus": "Any known carrier status",
+      "repeatedConcerns": "The same condition or similar concerns appearing in more than one relative",
+      "sharedAncestry": "Whether the biological parents share ancestry",
+      "previousReports": "Any previous genetic reports the family already has",
+      "questions": "Questions you want to ask a genetics professional"
+    },
+    "ethics": {
+      "title": "Privacy, respect, and your decisions",
+      "privacyTitle": "Genetic privacy",
+      "privacyBody": "Genetic information can be sensitive and may have implications for biological relatives. It is worth asking any provider how your information is stored, used, and shared. Shared Blood does not collect genetic results.",
+      "stigmaTitle": "No stigma, no blame",
+      "stigmaBody": "A family with a known history of an inherited condition is exactly that, not a “risky” or “bad” family. Carriers and affected people deserve respect, free of stigma toward any community, caste, or biradari.",
+      "bothParentsTitle": "Inherited from both parents",
+      "bothParentsBody": "Children inherit genetic information from both biological parents. In autosomal recessive conditions, a child may inherit one disease-associated variant from each parent; this is never one parent's, or one mother's, fault.",
+      "ethicsTitle": "Your values and beliefs",
+      "ethicsBody": "Religious beliefs, family values, and personal ethics are yours. You may discuss these questions with qualified healthcare professionals and trusted advisors. Shared Blood does not give religious rulings or make personal decisions for you."
+    }
+  },
+  "Survey": {
+    "kicker": "Public awareness research",
+    "title": "What Pakistan Knows",
+    "subtitle": "Understanding public awareness of genetic disorders and inherited risk.",
+    "overview": {
+      "title": "About this research",
+      "purpose": "Shared Blood studies what people know, do not know, and believe about inherited conditions, carrier status, family history, and genetic testing, and how awareness relates to family and social context. It reports aggregate findings from people who chose to take part in a survey.",
+      "period": "Collection period",
+      "cities": "Cities in sample",
+      "totalResponses": "Total responses",
+      "disclaimer": "These findings describe the people who participated in the survey. They may show patterns within the survey sample, but should not automatically be read as representing all people in Pakistan or all residents of the surveyed cities.",
+      "methodologySummary": "In brief"
+    },
+    "findings": {
+      "title": "Key findings"
+    },
+    "finding": {
+      "basedOn": "Based on {count} valid responses",
+      "whatWeFound": "What the survey found",
+      "whatItMaySuggest": "What this may suggest",
+      "methodologyLink": "How this was measured"
+    },
+    "findingTypes": {
+      "KEY_FINDING": "Key finding",
+      "AWARENESS_FINDING": "Awareness finding",
+      "DISEASE_FINDING": "Disease finding",
+      "SOCIAL_ATTITUDE_FINDING": "Social attitude finding",
+      "CITY_COMPARISON": "City comparison",
+      "TESTING_ATTITUDE_FINDING": "Testing attitude finding",
+      "INFORMATION_SOURCE_FINDING": "Information source finding",
+      "RESEARCH_LIMITATION": "Research limitation"
+    },
+    "awareness": {
+      "title": "Disease awareness",
+      "intro": "How much respondents said they had heard about each condition, on the same self-reported awareness scale. Self-reported awareness is not the same as medical knowledge.",
+      "chartTitle": "Had heard of each condition (surveyed respondents)",
+      "chartDescription": "Percentage of surveyed respondents who reported having heard of each condition.",
+      "sourceLabel": "Shared Blood survey sample"
+    },
+    "attitudes": {
+      "title": "Cousin marriage, family & testing attitudes",
+      "intro": "Attitudes are shown across several dimensions. Social acceptance, perceived risk, family involvement, and support for testing can coexist; respondents are not sorted into “for” or “against” groups.",
+      "agree": "Agree",
+      "neutral": "Neutral",
+      "disagree": "Disagree",
+      "sourcesTitle": "Where respondents heard about inherited conditions",
+      "sourcesChartTitle": "Information sources (surveyed respondents)",
+      "sourcesChartDescription": "Percentage of surveyed respondents naming each source. Respondents could select more than one."
+    },
+    "informationSources": {
+      "DOCTOR": "Doctor",
+      "HOSPITAL": "Hospital",
+      "SCHOOL": "School",
+      "UNIVERSITY": "University",
+      "FAMILY": "Family",
+      "FRIENDS": "Friends",
+      "SOCIAL_MEDIA": "Social media",
+      "NEWS": "News",
+      "RELIGIOUS_OR_COMMUNITY_SOURCE": "Religious or community source",
+      "INTERNET_SEARCH": "Internet search",
+      "NGO": "NGO",
+      "OTHER": "Other"
+    },
+    "city": {
+      "title": "Across surveyed cities",
+      "intro": "A comparison of surveyed samples in each city. These describe the people surveyed in each city, not the whole population of any city, and do not rank cities.",
+      "chartTitle": "Had heard of {disease}, by surveyed city sample",
+      "chartDescription": "Percentage of surveyed respondents in each city sample who reported having heard of the condition.",
+      "limitation": "Each bar is a surveyed sample within a city, not the whole city population.",
+      "suppressionNote": "Some city values are not shown because too few respondents were in that group to report a figure while protecting privacy."
+    },
+    "cities": {
+      "ISLAMABAD": "Islamabad",
+      "RAWALPINDI": "Rawalpindi",
+      "LAHORE": "Lahore",
+      "KARACHI": "Karachi",
+      "OTHER": "Other"
+    },
+    "methodology": {
+      "title": "Methodology & limitations",
+      "samplingTitle": "How respondents were recruited",
+      "samplingPending": "Recruitment and sampling details will be documented here when an approved survey dataset is published.",
+      "privacyTitle": "Privacy",
+      "privacyPending": "The privacy and consent terminology will match the actual data process and be documented here when a survey is published.",
+      "eligibilityTitle": "Who could take part",
+      "eligibilityBody": "Participation is voluntary and open to adults aged 18 or older who complete the survey in English or Urdu. Residence is not inferred from IP address.",
+      "limitationsTitle": "Limitations",
+      "disclaimer": "Shared Blood's survey findings describe the people who participated in the survey. The results may identify patterns within the survey sample but should not automatically be interpreted as representing all people in Pakistan or all residents of the surveyed cities."
+    },
+    "empty": {
+      "title": "Survey findings are being prepared",
+      "body": "Responses are collected externally, cleaned and aggregated offline, and reviewed before publication. Aggregate findings will appear here once they have been approved. No draft or estimated statistics are shown in the meantime."
+    },
+    "chart": {
+      "suppressed": "Not shown",
+      "basedOn": "Based on {count} valid responses",
+      "showTable": "Show data table",
+      "category": "Category",
+      "value": "Value"
+    }
+  },
+  "Community": {
+    "kicker": "Shared Blood in the Community",
+    "title": "Shared Blood in the Community",
+    "subtitle": "Taking genetic health education beyond the screen.",
+    "intro": {
+      "title": "Our community work",
+      "body": "Shared Blood applies its scientific and educational work outside the website through direct community engagement: childcare-worker education, awareness sessions, and learning-booklet distribution. This page documents what we did, who it was for, what we delivered, what we measured, what we observed, and how that work changed the project.",
+      "positioning": "We frame community work as educational collaboration and public-health awareness, not saving communities from their traditions. We prioritise evidence of work over promotional language, and we recognise the family structures, healthcare access, and existing knowledge of the people we work with."
+    },
+    "impact": {
+      "title": "Documented impact",
+      "subtitle": "Every total below is derived from approved, completed activity records, not typed by hand."
+    },
+    "metrics": {
+      "documentedActivities": "Documented activities",
+      "recordedParticipants": "Recorded participants",
+      "recordedNote": "Recorded attendance, not unique people; some may have attended more than once.",
+      "childcareWorkers": "Childcare workers reached",
+      "trainingCompletions": "Training completions",
+      "learningBooklets": "Learning booklets distributed",
+      "bookletNote": "A booklet distributed is a resource, not a person educated.",
+      "cities": "Cities with activities"
+    },
+    "focus": {
+      "title": "Current fieldwork focus",
+      "body": "Our initial fieldwork spans these activity types. The architecture is not built only around orphanages and can grow to new audiences and regions."
+    },
+    "featured": {
+      "title": "Featured activities"
+    },
+    "findings": {
+      "title": "What the fieldwork shows"
+    },
+    "childcare": {
+      "title": "Childcare-worker education",
+      "body": "We help childcare workers caring for infants and young children learn about inherited conditions, symptoms that may appear in infancy, and supportive growth considerations.",
+      "boundary": "Childcare workers learn to recognise possible warning signs and seek appropriate medical evaluation, not to diagnose or confirm a disorder."
+    },
+    "booklet": {
+      "title": "Learning booklets",
+      "body": "Our learning booklets are versioned educational resources. Each fieldwork record references the exact resource version used, and distributed booklets are counted separately from people educated."
+    },
+    "learnings": {
+      "title": "What we learned in the field",
+      "noticed": "What we noticed",
+      "mattered": "Why it mattered",
+      "changed": "What we changed"
+    },
+    "changed": {
+      "narrative": "We researched, we built, we took it into the community, we listened, and we changed the project."
+    },
+    "archive": {
+      "title": "Activity archive",
+      "count": "{count} activities",
+      "filterType": "Type",
+      "filterCity": "City",
+      "filterYear": "Year",
+      "all": "All",
+      "empty": "No activities match these filters."
+    },
+    "partners": {
+      "title": "Partners"
+    },
+    "finding": {
+      "whatWeFound": "What we found",
+      "whatItMaySuggest": "What this may suggest"
+    },
+    "evidence": {
+      "title": "Evidence"
+    },
+    "activity": {
+      "back": "Back to community work",
+      "participants": "participants",
+      "viewActivity": "View activity",
+      "context": "Activity context",
+      "objectives": "Why we did it",
+      "delivered": "What Shared Blood delivered",
+      "audience": "Intended audience",
+      "topics": "Topics covered",
+      "resources": "Educational resources used",
+      "version": "version {n}",
+      "impactMetrics": "Documented impact metrics",
+      "approx": "about {n}",
+      "observed": "What we observed",
+      "observationNote": "These observations are contextual to this activity and are not claims about any city or population.",
+      "learned": "What we learned",
+      "partnerAttribution": "Partner attribution"
+    },
+    "methodology": {
+      "title": "Fieldwork methodology & limitations",
+      "pending": "Full methodology will be published alongside the first approved activities.",
+      "limitationsTitle": "Limitations",
+      "limitRepeat": "Some participants may have attended more than one activity (repeat attendance).",
+      "limitCounting": "Counting methods vary between activities.",
+      "limitEstimated": "Estimated attendance is approximate, not a verified count.",
+      "limitBooklets": "A booklet distributed does not equal a person educated.",
+      "limitRetention": "Immediate knowledge change does not equal long-term retention.",
+      "limitObservations": "Field observations are contextual, not epidemiological samples, and fieldwork locations are not disease epicentres.",
+      "disclaimer": "This page documents Shared Blood's community activities and aggregate impact. It does not create profiles of participants, children, or patients, and it does not estimate hypothetical lives saved or diseases prevented."
+    },
+    "empty": {
+      "title": "Community work is being documented",
+      "body": "Shared Blood's community work is currently being documented for publication. Approved activities and aggregate impact will appear here once they have been reviewed. Planned activities are never shown as completed impact."
+    },
+    "scopes": {
+      "CHILDCARE_WORKER_EDUCATION": "Childcare-worker education",
+      "ORPHANAGE_OUTREACH": "Orphanage outreach",
+      "LEARNING_BOOKLET_DISTRIBUTION": "Learning booklet distribution",
+      "GENETIC_AWARENESS_SESSION": "Genetic awareness session",
+      "INHERITANCE_EDUCATION": "Inheritance education",
+      "CARRIER_AWARENESS_SESSION": "Carrier awareness session",
+      "GENETIC_TESTING_AWARENESS": "Genetic testing awareness",
+      "COMMUNITY_INFORMATION_CAMPAIGN": "Community information campaign",
+      "PARTNER_SUPPORTED_OUTREACH": "Partner-supported outreach"
+    },
+    "activityTypes": {
+      "TRAINING_SESSION": "Training session",
+      "AWARENESS_SESSION": "Awareness session",
+      "BOOKLET_DISTRIBUTION": "Booklet distribution",
+      "COMMUNITY_WORKSHOP": "Community workshop",
+      "INFORMATION_CAMPAIGN": "Information campaign",
+      "FIELD_VISIT": "Field visit",
+      "PARTNER_ACTIVITY": "Partner activity",
+      "EDUCATIONAL_INTERVIEW": "Educational interview",
+      "PILOT_SESSION": "Pilot session"
+    },
+    "cities": {
+      "ISLAMABAD": "Islamabad",
+      "RAWALPINDI": "Rawalpindi",
+      "LAHORE": "Lahore",
+      "KARACHI": "Karachi",
+      "OTHER": "Other"
+    },
+    "locationTypes": {
+      "ORPHANAGE": "Orphanage",
+      "COMMUNITY_CENTER": "Community centre",
+      "SCHOOL": "School",
+      "UNIVERSITY": "University",
+      "HEALTH_FACILITY": "Health facility",
+      "PARTNER_OFFICE": "Partner office",
+      "PUBLIC_EVENT": "Public event",
+      "RURAL_COMMUNITY": "Rural community",
+      "URBAN_COMMUNITY": "Urban community",
+      "OTHER": "Other"
+    },
+    "audiences": {
+      "CHILDCARE_WORKER": "Childcare worker",
+      "ORPHANAGE_CARE_STAFF": "Orphanage care staff",
+      "COMMUNITY_MEMBER": "Community member",
+      "PARENT_OR_GUARDIAN": "Parent or guardian",
+      "STUDENT": "Student",
+      "HEALTHCARE_WORKER": "Healthcare worker",
+      "VOLUNTEER": "Volunteer",
+      "EDUCATOR": "Educator",
+      "GENERAL_PUBLIC": "General public",
+      "OTHER": "Other"
+    },
+    "projectAreas": {
+      "DISEASE_CONTENT": "Disease content",
+      "URDU_TRANSLATION": "Urdu translation",
+      "LEARNING_BOOKLET": "Learning booklet",
+      "CALCULATOR_EXPLANATION": "Calculator explanation",
+      "GENETIC_TESTING_EDUCATION": "Genetic testing education",
+      "CARRIER_EDUCATION": "Carrier education",
+      "FIELDWORK_METHOD": "Fieldwork method",
+      "SURVEY_DESIGN": "Survey design",
+      "ACCESSIBILITY": "Accessibility",
+      "WEBSITE_NAVIGATION": "Website navigation",
+      "OTHER": "Other"
+    },
+    "findingTypes": {
+      "ACTIVITY_HIGHLIGHT": "Activity highlight",
+      "TRAINING_FINDING": "Training finding",
+      "RESOURCE_DISTRIBUTION_FINDING": "Resource distribution",
+      "FIELD_LEARNING": "Field learning",
+      "PROJECT_CHANGE": "Project change",
+      "COMMUNITY_QUESTION": "Community question",
+      "ASSESSMENT_FINDING": "Assessment finding",
+      "PARTNER_ACTIVITY_FINDING": "Partner activity"
+    },
+    "evidenceTypes": {
+      "ACTIVITY_PHOTO": "Activity photo",
+      "RESOURCE_PHOTO": "Resource photo",
+      "DISTRIBUTION_PHOTO": "Distribution photo",
+      "VENUE_PHOTO": "Venue photo",
+      "SESSION_MATERIAL": "Session material",
+      "ANONYMIZED_ATTENDANCE_SUMMARY": "Anonymised attendance summary",
+      "PARTNER_CONFIRMATION": "Partner confirmation",
+      "FIELD_NOTE_EXCERPT": "Field note excerpt",
+      "ASSESSMENT_SUMMARY": "Assessment summary"
+    },
+    "partnerTypes": {
+      "ORPHANAGE": "Orphanage",
+      "NGO": "NGO",
+      "COMMUNITY_ORGANIZATION": "Community organisation",
+      "EDUCATIONAL_INSTITUTION": "Educational institution",
+      "HEALTH_ORGANIZATION": "Health organisation",
+      "FOUNDATION": "Foundation",
+      "OTHER": "Other"
+    },
+    "partnershipTypes": {
+      "HOST_PARTNER": "Host partner",
+      "OUTREACH_PARTNER": "Outreach partner",
+      "EDUCATION_PARTNER": "Education partner",
+      "DISTRIBUTION_PARTNER": "Distribution partner",
+      "RESEARCH_SUPPORT_PARTNER": "Research support partner",
+      "LOGISTICS_PARTNER": "Logistics partner"
+    },
+    "observationTypes": {
+      "EDUCATIONAL_CONFUSION": "Educational confusion",
+      "COMMON_QUESTION": "Common question",
+      "CONTENT_GAP": "Content gap",
+      "LANGUAGE_BARRIER": "Language barrier",
+      "ACCESSIBILITY_BARRIER": "Accessibility barrier",
+      "HEALTHCARE_ACCESS_CONCERN": "Healthcare access concern",
+      "TESTING_ACCESS_CONCERN": "Testing access concern",
+      "SOCIAL_ATTITUDE_OBSERVATION": "Social attitude observation",
+      "FAMILY_CONTEXT_OBSERVATION": "Family context observation",
+      "RESOURCE_FEEDBACK": "Resource feedback",
+      "FIELD_LOGISTICS": "Field logistics",
+      "PROJECT_IMPROVEMENT": "Project improvement"
+    },
+    "verification": {
+      "INTERNAL_RECORD": "Internal record",
+      "PARTNER_CONFIRMED": "Partner confirmed",
+      "DOCUMENT_SUPPORTED": "Document supported",
+      "ESTIMATED": "Estimated",
+      "VERIFIED": "Verified"
+    },
+    "metricCodes": {
+      "DOCUMENTED_ACTIVITIES": "Documented activities",
+      "RECORDED_PARTICIPANTS": "Recorded participants",
+      "CHILDCARE_WORKERS_REACHED": "Childcare workers reached",
+      "STRUCTURED_TRAINING_COMPLETIONS": "Training completions",
+      "LEARNING_BOOKLETS_DISTRIBUTED": "Learning booklets distributed",
+      "EDUCATIONAL_RESOURCES_DISTRIBUTED": "Educational resources distributed",
+      "CITIES_WITH_COMPLETED_ACTIVITIES": "Cities with activities",
+      "PARTNER_SUPPORTED_ACTIVITIES": "Partner-supported activities",
+      "PRE_POST_ASSESSMENT_ACTIVITIES": "Pre/post assessment activities",
+      "IMMEDIATE_KNOWLEDGE_CHANGE": "Immediate knowledge change"
+    }
+  },
+  "Research": {
+    "kicker": "Research & Findings",
+    "title": "Research & Findings",
+    "subtitle": "What Shared Blood is learning through research and community work.",
+    "intro": {
+      "title": "How we do research",
+      "body": "Shared Blood turns approved survey findings and documented community work into structured, reviewed research outputs. Each finding shows what was studied, where the evidence came from, what evidence type supports it, how it was calculated, what it does and does not show, and how it changed the project.",
+      "disclaimer": "These findings describe the datasets, survey samples, and documented activities they were produced from, and should be read within their methodology and limitations. Shared Blood research is educational and public-health focused and does not provide individual medical diagnosis."
+    },
+    "questions": {
+      "title": "Current research questions"
+    },
+    "featured": {
+      "title": "Featured findings"
+    },
+    "reports": {
+      "title": "Research reports"
+    },
+    "learnings": {
+      "title": "How research changed Shared Blood",
+      "change": "Change"
+    },
+    "methodology": {
+      "title": "Methodology",
+      "representativeNote": "Sample size and representativeness are separate. A convenience sample is not representative of Pakistan, and national scope is used only where the evidence supports it.",
+      "limitationsTitle": "Research limitations"
+    },
+    "archive": {
+      "title": "Research archive",
+      "count": "{count} findings",
+      "filterDomain": "Domain",
+      "filterEvidence": "Evidence type",
+      "filterYear": "Year",
+      "all": "All",
+      "empty": "No findings match the selected research filters."
+    },
+    "empty": {
+      "findingsTitle": "Research findings are being reviewed",
+      "findingsBody": "Shared Blood research findings are currently being reviewed for publication. Approved findings, with their evidence sources and limitations, will appear here once reviewed.",
+      "reports": "No research reports are currently available."
+    },
+    "finding": {
+      "view": "View finding",
+      "back": "Back to research",
+      "context": "Sample context",
+      "keyLimitation": "Key limitation",
+      "whatWeStudied": "What we studied",
+      "topics": "Topics",
+      "evidenceSource": "Evidence source",
+      "datasetVersion": "dataset version",
+      "moduleSource": "Module {id} source",
+      "method": "Method",
+      "whatWeFound": "What we found",
+      "howWeInterpret": "How we interpret it",
+      "possibleExplanation": "Possible explanation",
+      "doesNotShow": "What this does not show",
+      "limitations": "Limitations",
+      "howInfluenced": "How this influenced Shared Blood",
+      "related": "Related findings",
+      "relatedNote": "Related findings share a topic or domain and do not imply causation.",
+      "references": "References",
+      "source": "Source",
+      "relatedReport": "Related report"
+    },
+    "report": {
+      "view": "View report",
+      "back": "Back to research",
+      "published": "Published",
+      "version": "Version",
+      "pdfAvailable": "PDF available",
+      "executiveSummary": "Executive summary",
+      "background": "Background",
+      "objectives": "Objectives",
+      "methodology": "Methodology",
+      "keyFindings": "Key findings",
+      "discussion": "Discussion",
+      "limitations": "Limitations",
+      "projectImplications": "How this influenced Shared Blood",
+      "conclusion": "Conclusion",
+      "download": "Download report",
+      "downloadPdf": "Download PDF ({lang})"
+    },
+    "chart": {
+      "showTable": "Show data table",
+      "change": "Change: {value} {unit}"
+    },
+    "evidenceTypes": {
+      "SURVEY_DATA": "Survey data",
+      "FIELDWORK_METRIC": "Fieldwork metric",
+      "FIELD_OBSERVATION": "Field observation",
+      "TRAINING_ASSESSMENT": "Training assessment",
+      "LITERATURE_SOURCE": "Literature source",
+      "PROJECT_ANALYTICS": "Project analytics",
+      "PROJECT_OPERATIONAL_DATA": "Project operational data",
+      "MIXED_EVIDENCE": "Mixed evidence"
+    },
+    "domains": {
+      "GENETIC_HEALTH_AWARENESS": "Genetic health awareness",
+      "INHERITANCE_UNDERSTANDING": "Inheritance understanding",
+      "CARRIER_STATUS_AWARENESS": "Carrier status awareness",
+      "GENETIC_TESTING_AWARENESS": "Genetic testing awareness",
+      "CONSANGUINITY_AWARENESS": "Consanguinity awareness",
+      "HEALTHCARE_ACCESS": "Healthcare access",
+      "GENETIC_COUNSELLING_AWARENESS": "Genetic counselling awareness",
+      "CHILDCARE_WORKER_EDUCATION": "Childcare-worker education",
+      "EARLY_SYMPTOM_AWARENESS": "Early symptom awareness",
+      "PUBLIC_HEALTH_COMMUNICATION": "Public health communication",
+      "EDUCATIONAL_RESOURCE_EFFECTIVENESS": "Educational resource effectiveness",
+      "COMMUNITY_HEALTH_EDUCATION": "Community health education"
+    },
+    "conclusion": {
+      "SUPPORTED": "Supported",
+      "PARTIALLY_SUPPORTED": "Partially supported",
+      "INCONCLUSIVE": "Inconclusive",
+      "CONTRADICTORY": "Contradictory"
+    },
+    "confidence": {
+      "DESCRIPTIVE": "Descriptive",
+      "EXPLORATORY": "Exploratory",
+      "MODERATE_SUPPORT": "Moderate support",
+      "STRONG_SUPPORT": "Strong support"
+    },
+    "scope": {
+      "PROJECT_SAMPLE": "Project sample",
+      "ACTIVITY_LOCATION": "Activity location",
+      "CITY_LEVEL": "City level",
+      "MULTI_CITY": "Multi-city",
+      "PROVINCE_LEVEL": "Province level",
+      "NATIONAL": "National",
+      "LITERATURE_DEFINED": "Literature-defined"
+    },
+    "methodTypes": {
+      "DESCRIPTIVE_SURVEY": "Descriptive survey",
+      "CROSS_SECTIONAL_SURVEY": "Cross-sectional survey",
+      "FIELDWORK_DOCUMENTATION": "Fieldwork documentation",
+      "PRE_POST_EDUCATIONAL_ASSESSMENT": "Pre/post educational assessment",
+      "AGGREGATE_ACTIVITY_ANALYSIS": "Aggregate activity analysis",
+      "QUALITATIVE_FIELD_OBSERVATION": "Qualitative field observation",
+      "LITERATURE_SYNTHESIS": "Literature synthesis",
+      "MIXED_METHODS": "Mixed methods"
+    },
+    "sampling": {
+      "CONVENIENCE_SAMPLE": "Convenience sample",
+      "VOLUNTARY_RESPONSE": "Voluntary response",
+      "PURPOSIVE_SAMPLE": "Purposive sample",
+      "ACTIVITY_PARTICIPANT_SAMPLE": "Activity participant sample",
+      "CENSUS_OF_DOCUMENTED_ACTIVITIES": "Census of documented activities",
+      "LITERATURE_DEFINED": "Literature-defined",
+      "OTHER": "Other"
+    },
+    "limitationTypes": {
+      "SAMPLE_SIZE": "Sample size",
+      "SAMPLING_BIAS": "Sampling bias",
+      "VOLUNTARY_RESPONSE_BIAS": "Voluntary response bias",
+      "GEOGRAPHIC_LIMITATION": "Geographic limitation",
+      "DEMOGRAPHIC_LIMITATION": "Demographic limitation",
+      "SELF_REPORT": "Self-report",
+      "MISSING_DATA": "Missing data",
+      "UNPAIRED_ASSESSMENT": "Unpaired assessment",
+      "SHORT_TERM_MEASUREMENT": "Short-term measurement",
+      "FIELD_OBSERVATION_CONTEXT": "Field observation context",
+      "NO_DEDUPLICATION": "No deduplication",
+      "MEASUREMENT_LIMITATION": "Measurement limitation",
+      "TRANSLATION_LIMITATION": "Translation limitation",
+      "OTHER": "Other"
+    },
+    "vizTypes": {
+      "BAR_CHART": "Bar chart",
+      "HORIZONTAL_BAR_CHART": "Horizontal bar chart",
+      "DONUT_CHART": "Donut chart",
+      "LINE_CHART": "Line chart",
+      "COMPARISON_BAR": "Comparison bars",
+      "SCORE_CHANGE": "Score change"
+    },
+    "reportTypes": {
+      "SURVEY_REPORT": "Survey report",
+      "FIELDWORK_REPORT": "Fieldwork report",
+      "TRAINING_IMPACT_REPORT": "Training impact report",
+      "RESEARCH_BRIEF": "Research brief",
+      "COMMUNITY_FINDINGS_REPORT": "Community findings report",
+      "ANNUAL_RESEARCH_SUMMARY": "Annual research summary",
+      "MIXED_METHODS_REPORT": "Mixed methods report"
+    },
+    "questionStatus": {
+      "PROPOSED": "Proposed",
+      "ACTIVE": "Active",
+      "ANALYSIS": "In analysis",
+      "ANSWERED": "Answered",
+      "INCONCLUSIVE": "Inconclusive",
+      "ARCHIVED": "Archived"
+    },
+    "implementation": {
+      "PROPOSED": "Proposed",
+      "APPROVED": "Approved",
+      "IN_PROGRESS": "In progress",
+      "IMPLEMENTED": "Implemented",
+      "REJECTED": "Not adopted",
+      "ARCHIVED": "Archived"
+    }
+  },
+  "Policy": {
+    "kicker": "Policy & Advocacy",
+    "title": "Policy & Advocacy",
+    "subtitle": "Turning genetic-health evidence into practical educational priorities.",
+    "intro": {
+      "title": "Our educational advocacy",
+      "body": "Shared Blood turns approved research findings and documented fieldwork into clearly-bounded advocacy priorities for genetic-health education. Every priority explains the issue, the evidence, the recommended educational response, who could act, and, crucially, what the advocacy does not claim.",
+      "disclaimer": "Shared Blood's advocacy focuses on genetic-health education, awareness, and public-health communication. Recommendations are based on the evidence and limitations identified in each priority and do not represent government policy or individual medical advice. Shared Blood is not a government authority."
+    },
+    "scopeSection": {
+      "title": "What Shared Blood advocates for",
+      "body": "Version 1 advocacy stays aligned with Shared Blood's educational mission and remains voluntary, non-coercive, and non-stigmatizing."
+    },
+    "featured": {
+      "title": "Featured advocacy priorities"
+    },
+    "briefs": {
+      "title": "Policy & advocacy briefs"
+    },
+    "boundaries": {
+      "title": "Evidence boundaries"
+    },
+    "evidenceBehind": {
+      "title": "Evidence behind our advocacy",
+      "intro": "Each advocacy priority is supported by one or more evidence types. Each type keeps its research interpretation boundary.",
+      "RESEARCH_FINDING": "Reviewed Shared Blood research findings, bounded by their sample and limitations.",
+      "SURVEY_FINDING": "Approved survey findings describing the surveyed sample, not the population.",
+      "FIELDWORK_METRIC": "Documented Shared Blood activity records, not general-population measures.",
+      "FIELD_OBSERVATION": "Contextual observations from documented sessions, not national knowledge levels.",
+      "TRAINING_ASSESSMENT": "Aggregate assessment results measuring immediate change only.",
+      "LITERATURE_SOURCE": "External published research, attributed to its source.",
+      "PROJECT_OPERATIONAL_DATA": "Approved project execution data describing Shared Blood's own work."
+    },
+    "timeline": {
+      "title": "Advocacy timeline",
+      "note": "This timeline describes Shared Blood activity. It does not prove policy influence."
+    },
+    "archive": {
+      "title": "All advocacy priorities",
+      "count": "{count} priorities",
+      "filterDomain": "Domain",
+      "filterType": "Priority type",
+      "filterYear": "Year",
+      "all": "All",
+      "empty": "No advocacy priorities match the selected filters."
+    },
+    "empty": {
+      "prioritiesTitle": "Advocacy priorities are being reviewed",
+      "prioritiesBody": "Shared Blood advocacy priorities are currently being reviewed for publication. Approved priorities, with their evidence and limitations, will appear here once reviewed.",
+      "briefs": "No policy or advocacy briefs are currently available."
+    },
+    "priority": {
+      "evidence": "Evidence",
+      "action": "Recommended action",
+      "boundary": "Key boundary",
+      "view": "View priority",
+      "back": "Back to advocacy",
+      "position": "Shared Blood position",
+      "issue": "The issue",
+      "whyDiscussing": "Why we are discussing it",
+      "evidenceBoundaries": "Evidence boundaries",
+      "recommendations": "Recommended actions",
+      "stakeholders": "Relevant stakeholders",
+      "stakeholdersNote": "These are potential implementation audiences described by role, not an assignment of responsibility or blame.",
+      "implementation": "Implementation considerations",
+      "ethics": "Ethical considerations",
+      "doesNotClaim": "What this advocacy does not claim",
+      "limitations": "Limitations",
+      "relatedFindings": "Related research findings",
+      "viewResearch": "View the research finding",
+      "relatedBriefs": "Related briefs",
+      "references": "References",
+      "source": "Source"
+    },
+    "brief": {
+      "published": "Published",
+      "version": "Version",
+      "view": "View brief",
+      "pdfAvailable": "PDF available",
+      "back": "Back to advocacy",
+      "executiveSummary": "Executive summary",
+      "issue": "The issue",
+      "evidence": "Evidence",
+      "policyContext": "Public health context",
+      "position": "Shared Blood advocacy position",
+      "reviewedEvidence": "Reviewed evidence",
+      "recommendations": "Recommendations",
+      "implementation": "Implementation considerations",
+      "ethics": "Ethical considerations",
+      "limitations": "Limitations",
+      "conclusion": "Conclusion",
+      "download": "Download brief",
+      "downloadPdf": "Download PDF ({lang})"
+    },
+    "priorityTypes": {
+      "PUBLIC_EDUCATION": "Public education",
+      "PROFESSIONAL_EDUCATION": "Professional education",
+      "CHILDCARE_WORKER_TRAINING": "Childcare-worker training",
+      "CARRIER_AWARENESS": "Carrier awareness",
+      "GENETIC_TESTING_EDUCATION": "Genetic testing education",
+      "GENETIC_COUNSELLING_AWARENESS": "Genetic counselling awareness",
+      "EARLY_SYMPTOM_EDUCATION": "Early symptom education",
+      "LANGUAGE_ACCESS": "Language access",
+      "EDUCATIONAL_RESOURCE_DISTRIBUTION": "Educational resource distribution",
+      "COMMUNITY_OUTREACH": "Community outreach",
+      "INSTITUTIONAL_EDUCATION": "Institutional education"
+    },
+    "domains": {
+      "GENETIC_HEALTH_EDUCATION": "Genetic health education",
+      "PUBLIC_HEALTH_COMMUNICATION": "Public health communication",
+      "CARRIER_AWARENESS": "Carrier awareness",
+      "GENETIC_TESTING_EDUCATION": "Genetic testing education",
+      "GENETIC_COUNSELLING_AWARENESS": "Genetic counselling awareness",
+      "CONSANGUINITY_RISK_COMMUNICATION": "Consanguinity risk communication",
+      "CHILDCARE_WORKER_TRAINING": "Childcare-worker training",
+      "EARLY_SYMPTOM_EDUCATION": "Early symptom education",
+      "LANGUAGE_ACCESSIBILITY": "Language accessibility",
+      "COMMUNITY_HEALTH_EDUCATION": "Community health education",
+      "INSTITUTIONAL_HEALTH_EDUCATION": "Institutional health education",
+      "EDUCATIONAL_RESOURCE_ACCESS": "Educational resource access"
+    },
+    "actionLevels": {
+      "PROJECT": "Project",
+      "ORGANIZATION": "Organization",
+      "INSTITUTION": "Institution",
+      "COMMUNITY": "Community",
+      "HEALTH_EDUCATION_SYSTEM": "Health education system",
+      "PUBLIC_HEALTH_COMMUNICATION": "Public health communication"
+    },
+    "evidenceSourceTypes": {
+      "RESEARCH_FINDING": "Research finding",
+      "SURVEY_FINDING": "Survey finding",
+      "FIELDWORK_METRIC": "Fieldwork metric",
+      "FIELD_OBSERVATION": "Field observation",
+      "TRAINING_ASSESSMENT": "Training assessment",
+      "LITERATURE_SOURCE": "Literature source",
+      "PROJECT_OPERATIONAL_DATA": "Project operational data"
+    },
+    "evidenceRoles": {
+      "PRIMARY_SUPPORT": "Primary support",
+      "CONTEXTUAL_SUPPORT": "Contextual support",
+      "LITERATURE_CONTEXT": "Literature context",
+      "FIELDWORK_CONTEXT": "Fieldwork context",
+      "IMPLEMENTATION_CONTEXT": "Implementation context",
+      "LIMITATION_CONTEXT": "Limitation context"
+    },
+    "scopeCompatibility": {
+      "DIRECT": "Directly supports",
+      "CONTEXTUAL": "Provides context",
+      "LIMITED": "Relevant but bounded",
+      "INCOMPATIBLE": "Incompatible"
+    },
+    "scope": {
+      "PROJECT_SAMPLE": "Project sample",
+      "ACTIVITY_LOCATION": "Activity location",
+      "CITY_LEVEL": "City level",
+      "MULTI_CITY": "Multi-city",
+      "PROVINCE_LEVEL": "Province level",
+      "NATIONAL": "National",
+      "LITERATURE_DEFINED": "Literature-defined"
+    },
+    "actionTypes": {
+      "CREATE_EDUCATIONAL_RESOURCE": "Create educational resource",
+      "EXPAND_LANGUAGE_ACCESS": "Expand language access",
+      "INTRODUCE_AWARENESS_SESSION": "Introduce awareness session",
+      "INTEGRATE_TRAINING_CONTENT": "Integrate training content",
+      "PROVIDE_CARRIER_EDUCATION": "Provide carrier education",
+      "PROVIDE_TESTING_INFORMATION": "Provide testing information",
+      "PROVIDE_COUNSELLING_INFORMATION": "Provide counselling information",
+      "IMPROVE_REFERRAL_INFORMATION": "Improve referral information",
+      "DISTRIBUTE_LEARNING_MATERIAL": "Distribute learning material",
+      "SUPPORT_COMMUNITY_EDUCATION": "Support community education",
+      "CONDUCT_FURTHER_RESEARCH": "Conduct further research"
+    },
+    "implementationLevels": {
+      "SHARED_BLOOD": "Shared Blood",
+      "LOCAL_ORGANIZATION": "Local organisation",
+      "CHILDCARE_INSTITUTION": "Childcare institution",
+      "EDUCATIONAL_INSTITUTION": "Educational institution",
+      "HEALTHCARE_EDUCATION": "Healthcare education",
+      "COMMUNITY_PROGRAMME": "Community programme",
+      "PUBLIC_HEALTH_COMMUNICATION": "Public health communication"
+    },
+    "resource": {
+      "LOW_RESOURCE": "Low resource",
+      "MODERATE_RESOURCE": "Moderate resource",
+      "HIGH_RESOURCE": "High resource",
+      "NOT_ASSESSED": "Not assessed"
+    },
+    "strength": {
+      "EXPLORATORY": "Exploratory",
+      "PROJECT_SUPPORTED": "Project supported",
+      "LITERATURE_SUPPORTED": "Literature supported",
+      "MULTI_SOURCE_SUPPORTED": "Multi-source supported"
+    },
+    "intervention": {
+      "NOT_EVALUATED": "Effectiveness not evaluated",
+      "THEORETICALLY_RELEVANT": "Theoretically relevant",
+      "LITERATURE_SUPPORTED": "Literature supported",
+      "PROJECT_PILOT_SUPPORTED": "Project-pilot supported",
+      "STRONGLY_SUPPORTED": "Strongly supported"
+    },
+    "stakeholderTypes": {
+      "PUBLIC_HEALTH_INSTITUTION": "Public health institution",
+      "HEALTHCARE_INSTITUTION": "Healthcare institution",
+      "EDUCATIONAL_INSTITUTION": "Educational institution",
+      "CHILDCARE_ORGANIZATION": "Childcare organisation",
+      "ORPHANAGE": "Orphanage",
+      "COMMUNITY_ORGANIZATION": "Community organisation",
+      "NONPROFIT_ORGANIZATION": "Nonprofit organisation",
+      "PROFESSIONAL_ASSOCIATION": "Professional association",
+      "RESEARCH_INSTITUTION": "Research institution",
+      "GENETIC_COUNSELLING_SERVICE": "Genetic counselling service",
+      "HEALTH_EDUCATOR": "Health educator",
+      "HEALTHCARE_PROFESSIONAL": "Healthcare professional",
+      "POLICYMAKER": "Policymaker",
+      "PUBLIC_HEALTH_COMMUNICATOR": "Public health communicator"
+    },
+    "briefTypes": {
+      "POLICY_BRIEF": "Policy brief",
+      "ADVOCACY_BRIEF": "Advocacy brief",
+      "EDUCATION_PRIORITY_BRIEF": "Education priority brief",
+      "INSTITUTIONAL_BRIEF": "Institutional brief",
+      "STAKEHOLDER_BRIEF": "Stakeholder brief",
+      "RESEARCH_TO_ACTION_BRIEF": "Research-to-action brief"
+    },
+    "policyLimitationTypes": {
+      "LIMITED_SAMPLE": "Limited sample",
+      "NON_REPRESENTATIVE_SAMPLE": "Non-representative sample",
+      "GEOGRAPHIC_LIMITATION": "Geographic limitation",
+      "FIELDWORK_CONTEXT": "Fieldwork context",
+      "LIMITED_INTERVENTION_EVIDENCE": "Limited intervention evidence",
+      "NO_OUTCOME_EVALUATION": "No outcome evaluation",
+      "IMPLEMENTATION_UNCERTAINTY": "Implementation uncertainty",
+      "RESOURCE_UNCERTAINTY": "Resource uncertainty",
+      "LEGAL_CONTEXT_NOT_REVIEWED": "Legal context not reviewed",
+      "POLICY_CONTEXT_INCOMPLETE": "Policy context incomplete",
+      "LITERATURE_LIMITATION": "Literature limitation",
+      "OTHER": "Other"
+    },
+    "timelineTypes": {
+      "BRIEF_PUBLISHED": "Brief published",
+      "PRIORITY_ADDED": "Priority added",
+      "INSTITUTIONAL_MEETING": "Institutional meeting",
+      "RESOURCE_ADOPTED": "Resource adopted",
+      "TRAINING_REQUESTED": "Training requested",
+      "RESEARCH_FINDING_PUBLISHED": "Research finding published"
+    }
+  },
+  "Governance": {
+    "principlesTitle": "Our governance principles",
+    "relatedTitle": "More governance",
+    "links": {
+      "privacy": "Privacy",
+      "ethics": "Research ethics",
+      "governance": "Research governance"
+    }
+  },
+  "DnaExplorer": {
+    "disclaimer": {
+      "title": "This is education, not a diagnosis",
+      "body": "This tool explains general biology for each condition. It does not test DNA, interpret variants, or predict any individual's health. For questions about your family, speak with a healthcare professional or genetic counselor."
+    },
+    "disease": {
+      "legend": "Choose a condition",
+      "help": "Each condition has its own gene and its own molecular story."
+    },
+    "subtype": {
+      "legend": "Choose an example or subtype",
+      "help": "This condition is a group: pick one to see its specific gene."
+    },
+    "intro": "Choose a condition above to explore how a change connected to its gene can affect the body.",
+    "chooseSubtype": "Choose an example above to see its specific molecular story.",
+    "steps": {
+      "stepOf": "Step {current} of {total}"
+    },
+    "controls": {
+      "previous": "Previous",
+      "next": "Next",
+      "restart": "Start over",
+      "reset": "Choose another condition",
+      "goToStep": "Go to step"
+    },
+    "exampleNote": "Note:",
+    "referencesLabel": "Learn more",
+    "viewSource": "View source"
+  },
+  "PunnettSquare": {
+    "intro": {
+      "title": "About the Punnett Square",
+      "body": "A Punnett square is a simple grid that shows how the alleles two parents could pass on combine. It visualises the probabilities from the Inheritance Probability Calculator; it does not calculate anything on its own."
+    },
+    "path": {
+      "calculator": {
+        "title": "Use the Inheritance Calculator",
+        "body": "Pick a condition and parent statuses to see the probabilities and the matching Punnett square.",
+        "cta": "Open the calculator"
+      },
+      "scenario": {
+        "title": "Explore an educational scenario",
+        "body": "See how a common hypothetical pairing builds its probabilities, right here."
+      }
+    },
+    "scenario": {
+      "legend": "Explore an educational scenario",
+      "help": "Choose a hypothetical parent pairing to see how the inheritance probabilities are built.",
+      "hypotheticalNote": "Hypothetical educational scenario",
+      "disclaimer": "This is a general educational example for each pregnancy, not a prediction about a real child, and not a diagnosis."
+    },
+    "scenarios": {
+      "recessiveCarrierCarrier": {
+        "label": "Both parents are carriers",
+        "description": "Autosomal recessive: each parent carries one changed copy."
+      },
+      "recessiveCarrierAffected": {
+        "label": "One carrier, one affected",
+        "description": "Autosomal recessive: one parent is a carrier, one is affected."
+      },
+      "dominantAffectedUnaffected": {
+        "label": "One affected, one unaffected",
+        "description": "Autosomal dominant: one parent has the variant, one does not."
+      }
+    },
+    "summaryHeading": "Probability summary",
+    "viz": {
+      "parentOne": "Parent 1 alleles",
+      "parentTwo": "Parent 2 alleles",
+      "caption": "Each cell is one possible combination the child could inherit.",
+      "textEquivalent": "Possible combinations"
+    },
+    "outcomes": {
+      "affected": {
+        "label": "Affected",
+        "explanation": "Inherits two changed copies and may be affected by the condition."
+      },
+      "carrier": {
+        "label": "Carrier",
+        "explanation": "Inherits one changed copy, usually healthy but can pass it on."
+      },
+      "unaffected": {
+        "label": "Unaffected",
+        "explanation": "Inherits no changed copy for this gene."
+      },
+      "inherits-variant": {
+        "label": "Inherits the variant",
+        "explanation": "Inherits one copy of the dominant variant."
+      },
+      "not-inherited": {
+        "label": "Does not inherit it",
+        "explanation": "Inherits no copy of the variant."
+      }
+    }
+  },
+  "About": {
+    "title": "About Shared Blood",
+    "intro": "Shared Blood is an educational platform about inherited genetic disorders in Pakistan. It helps families, students, and communities understand genetics in clear, respectful language.",
+    "mission": {
+      "heading": "Our mission",
+      "body": "Understanding Genetics. Supporting Families. Building Healthier Futures. We aim to make trustworthy, plain-language education about inherited conditions freely available in English and Urdu."
+    },
+    "approach": {
+      "heading": "Our approach",
+      "body": "Every topic is explained in plain language, in both English and Urdu, and is grounded in established science. We focus on understanding and support, never judgement of families, communities, or personal decisions."
+    },
+    "notWhat": {
+      "heading": "What Shared Blood is not",
+      "body": "Shared Blood is an educational resource. It is not a hospital, clinic, laboratory, or diagnostic service, and it does not provide medical diagnosis, testing, or personal risk assessment."
+    },
+    "disclaimer": {
+      "heading": "Not medical advice",
+      "body": "Shared Blood is an educational resource and does not provide medical diagnosis or advice. Always consult a qualified healthcare professional or genetic counselor."
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "intro": "For questions or feedback about Shared Blood, you can reach the project by email.",
+    "emailLabel": "Email",
+    "note": "Shared Blood is an educational project and cannot provide medical advice, diagnosis, or individual genetic counseling. Please consult a qualified healthcare professional for personal medical questions."
+  },
+  "ComingSoon": {
+    "badge": "Coming soon",
+    "hospitals": {
+      "title": "Hospitals & services",
+      "body": "A directory of hospitals and services is not available yet. We are not able to verify or recommend treatment centers at this time. Please consult a qualified healthcare professional for referrals."
+    },
+    "downloads": {
+      "title": "Downloads",
+      "body": "Downloadable educational materials are not available yet. Approved resources will appear here when they are ready."
+    }
+  }
+}

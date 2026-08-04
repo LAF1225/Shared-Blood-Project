@@ -1,0 +1,53 @@
+name: CodeQL
+
+# Module 26 §8. Static analysis for JavaScript and TypeScript.
+#
+# Availability note: CodeQL runs free on PUBLIC repositories. On a private
+# repository it requires GitHub Advanced Security. If the repository is private
+# and GHAS is not on the plan, this workflow will not run; record
+# CODEQL_UNAVAILABLE_UNDER_CURRENT_PLAN in the deployment report and rely on the
+# ESLint-based SAST controls established in Module 25.8 §16 instead.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    # Weekly, so newly published query packs surface without waiting for a push.
+    - cron: '0 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze JavaScript and TypeScript
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      # Minimum required for CodeQL to upload results.
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+          # `security-and-quality` is broader than the default `security`
+          # suite. This project is small enough to review the extra findings.
+          queries: security-and-quality
+
+      # No build step: JavaScript and TypeScript are analysed from source, and
+      # building would only add the Next output, which is generated code.
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: '/language:javascript-typescript'

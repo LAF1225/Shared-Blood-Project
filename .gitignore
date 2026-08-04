@@ -1,0 +1,48 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# test coverage (Module 26 §5: must never be committed)
+/coverage
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files — never commit real secrets; only .env.example is tracked
+.env
+.env.*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# vercel
+.vercel
+
+# claude code session artifacts (not part of the app)
+*.jsonl
+# Local tool permissions: machine-specific absolute paths, never shared
+.claude/settings.local.json
+
+# editor / OS local state (Module 26 §5: editor settings)
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
