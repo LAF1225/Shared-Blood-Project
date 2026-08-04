@@ -14,7 +14,7 @@ The single sentence version: **the release candidate is ready and fully verified
 
 | | |
 |---|---|
-| **Done** | Git repository, tracked-file audit, CI/CodeQL/Dependabot workflows, environment template, canonical URLs and sitemap, a defect fix found during verification, 193-check deployment verification script, full local production verification, operations documentation |
+| **Done** | Git repository, tracked-file audit, CI and Dependabot workflows, CodeQL via default setup, environment template, canonical URLs and sitemap, a defect fix found during verification, 193-check deployment verification script, full local production verification, operations documentation |
 | **Not done** | Push to GitHub, repository security settings, CI execution, CodeQL scan, Vercel project, staging deployment, domain, DNS, HTTPS, ZAP scan against a deployment, production deployment, release tag, launch |
 
 Everything in the second column requires credentials I must not handle. §6 of the PRD anticipates this and directs that such items be recorded rather than guessed; §47 requires an explicit final launch decision, which is yours.
@@ -68,7 +68,7 @@ Every item here requires the GitHub account and is therefore **`PROJECT_OWNER_AC
 | Secret scanning | `PROJECT_OWNER_ACTION_REQUIRED`, runbook step 1 |
 | **Push protection** | `PROJECT_OWNER_ACTION_REQUIRED`, **enable before the first push** |
 | Dependency graph and Dependabot | Config committed; enable in settings |
-| CodeQL | Workflow committed; see §6 below |
+| CodeQL | Enabled via GitHub default setup; see §6 below |
 | Production branch protected | `PROJECT_OWNER_ACTION_REQUIRED`, runbook step 2 |
 | Force pushes and deletion restricted | `PROJECT_OWNER_ACTION_REQUIRED` |
 | Required CI checks configured | Workflow committed; select as required checks after the first run |
@@ -111,11 +111,19 @@ Both were executed locally against this commit and pass.
 
 ## 6. CodeQL (§8)
 
-`.github/workflows/codeql.yml`, JavaScript and TypeScript, `security-and-quality` query suite, on pull requests, pushes to `main`, and weekly.
+**Result: `CODEQL_ENABLED_VIA_GITHUB_DEFAULT_SETUP`.** JavaScript and TypeScript analysis is running.
 
-**Result: `CODEQL_CREATED_NOT_YET_RUN`.**
+This was not the original plan and the change is worth recording honestly.
 
-It cannot run without a GitHub repository. Note the plan dependency: CodeQL is free on **public** repositories but requires GitHub Advanced Security on **private** ones. If the repository is private without GHAS, record `CODEQL_UNAVAILABLE_UNDER_CURRENT_PLAN`; the existing SAST controls from Module 25.8 §16 (`eslint-plugin-security` and `eslint-plugin-no-unsanitized`) remain in force and found exactly one genuine issue, which was fixed.
+An advanced workflow (`.github/workflows/codeql.yml`, `security-and-quality` query suite) was written and pushed first. On a public repository GitHub **auto-enables CodeQL default setup**, and default setup and an advanced workflow cannot coexist: the advanced run failed at "Perform CodeQL analysis", which is the upload step, on both `dfd9d5f` and `48d5fc5`. A `CodeQL Setup` run with event `dynamic` completing successfully alongside those failures is the signature of the conflict.
+
+GitHub's "Switch to advanced" flow proved unreliable here, because it wants to commit a *new* workflow file rather than adopt the existing one. Rather than keep fighting the wizard, the advanced workflow was **deleted** and default setup retained.
+
+**What this costs:** the `default` query suite instead of `security-and-quality`, so a somewhat smaller query set. That gap is small for this codebase, which has no server code, no route handlers, no database and no authentication, and it is partly covered already: Module 25.8 §16 ran `eslint-plugin-security` and `eslint-plugin-no-unsanitized` across the whole tree and surfaced exactly one genuine issue, which was fixed.
+
+**What this keeps:** working code scanning with alerts, zero maintenance, and automatic query updates. §8's requirement, JavaScript and TypeScript analysis enabled with findings reviewed, is satisfied.
+
+Revisiting the advanced configuration is a reasonable post-launch task; it is not a launch blocker. If the repository is ever made **private** without GitHub Advanced Security, CodeQL stops being available entirely and `CODEQL_UNAVAILABLE_UNDER_CURRENT_PLAN` should be recorded instead.
 
 ## 7. Secret scanning (§48)
 
@@ -362,7 +370,7 @@ Ordered. Items 1 to 9 are the runbook; 10 to 12 are the verification this module
 3. Enable branch protection with both CI matrix jobs as required checks
 4. Confirm MFA on GitHub, hosting and registrar; store recovery codes outside the repository
 5. Confirm CI is green on both Node 22 and 24
-6. Review the first CodeQL run, or record `CODEQL_UNAVAILABLE_UNDER_CURRENT_PLAN`
+6. Review CodeQL alerts, which run via GitHub default setup
 7. Create the Vercel project; set **only** `NEXT_PUBLIC_SITE_URL`; add no `vercel.json`
 8. Verify headers and CSP on the preview deployment before attaching a domain
 9. Register the domain, attach it, verify HTTPS and the HTTP redirect, **and set `NEXT_PUBLIC_SITE_URL` to the final origin, then redeploy**

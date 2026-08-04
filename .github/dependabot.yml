@@ -54,3 +54,12 @@ updates:
     labels: [ci, security]
     commit-message:
       prefix: 'ci'
+    ignore:
+      # Same reasoning as the npm block, and the same omission originally: the
+      # first run opened major bumps for actions/checkout 4 -> 7 and
+      # actions/setup-node 4 -> 7. Module 26 §7 asks for CI actions pinned to
+      # reviewed versions, and an unreviewed major bump to the action that
+      # checks out the code is exactly the change not to take mid-deployment.
+      # Revisit after launch as part of the modernization module.
+      - dependency-name: '*'
+        update-types: [version-update:semver-major]
