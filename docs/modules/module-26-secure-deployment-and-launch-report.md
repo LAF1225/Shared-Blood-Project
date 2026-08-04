@@ -28,9 +28,9 @@ The owner-facing procedure is [`docs/operations/deployment-runbook.md`](../opera
 | Deployment provider | **Vercel** (selected; project not yet created) |
 | Repository provider | **GitHub** (selected; repository not yet created) |
 | Production branch | `main` |
-| Production commit hash | `da9bf22d03ab6ac9e98132a3bfef71d5e2e38cce` |
-| Commits | 3 |
-| Tracked files | 524 |
+| Production commit hash | `c513838210649b2071a7d6c3b482480c510ca054` |
+| Commits | 4 |
+| Tracked files | 525 |
 | Node version | Verified locally on **24.18.0**; `.nvmrc` pins **22**; CI matrix covers **22 and 24** |
 | Package manager | npm **11.16.0** |
 | Clean-install result | `npm ci`, **414 packages**, pass |

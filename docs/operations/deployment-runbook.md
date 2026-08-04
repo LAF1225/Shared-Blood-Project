@@ -9,7 +9,8 @@ Nothing here has been performed automatically. The repository is committed local
 | | |
 |---|---|
 | Branch | `main` |
-| Commits | 3, working tree clean |
+| Commits | working tree clean; run `git log --oneline \| wc -l` for the current count |
+| Tracked files | 525 (`git ls-files \| wc -l`) |
 | Remote | none configured |
 | Deployment | none |
 | Gates | TypeScript clean, ESLint 0/0, 614 tests / 53 files, build 91/91 |
@@ -34,7 +35,13 @@ git remote add origin https://github.com/<you>/<repo>.git
 git push -u origin main
 ```
 
-**Check:** the GitHub file list shows 515 files. Confirm `.env.local`, `node_modules/` and `.next/` are **absent**. If any appear, stop and tell me.
+**Check:** compare GitHub against your local repository rather than against a number written here, since the number moves every time a commit lands:
+
+```bash
+git ls-files | wc -l && git rev-list --count HEAD
+```
+
+GitHub's file and commit counts must match those two figures exactly. Then confirm `.env.local`, `node_modules/` and `.next/` are **absent** from the file list. If any appear, stop and tell me.
 
 ## Step 2. Protect the branch
 
