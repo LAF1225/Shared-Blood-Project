@@ -34,12 +34,15 @@ updates:
         applies-to: security-updates
         patterns: ['*']
     ignore:
-      # Handle these as a dedicated modernization module (§45).
-      - dependency-name: next
-        update-types: [version-update:semver-major]
-      - dependency-name: next-intl
-        update-types: [version-update:semver-major]
-      - dependency-name: vitest
+      # Module 26 §45: major upgrades are a dedicated modernization module with
+      # its own full regression, not incidental traffic during deployment.
+      #
+      # This was originally scoped to next, next-intl and vitest, which was too
+      # narrow: the first Dependabot run immediately opened major PRs for
+      # eslint 8 -> 10, typescript 5 -> 7 and tailwind-merge 2 -> 3, all of
+      # which correctly failed CI and produced noise nobody was going to merge.
+      # Security updates are unaffected by this rule and still arrive.
+      - dependency-name: '*'
         update-types: [version-update:semver-major]
 
   - package-ecosystem: github-actions

@@ -30,7 +30,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+
+# NOTE: next-env.d.ts is deliberately NOT ignored, despite being in Next's
+# default template. It carries the `next/image-types/global` reference that
+# declares the PNG module type used by the static logo import, and CI runs
+# `typecheck` before `build`, so if the file is not committed the type check
+# fails on a clean checkout with "Cannot find module '.../logo.png'". Next
+# regenerates it with identical content, so tracking it produces no diff noise.
 
 # vercel
 .vercel
