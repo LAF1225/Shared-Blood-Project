@@ -31,10 +31,19 @@ export async function generateMetadata({
       template: `%s · ${t('appName')}`,
     },
     description: SITE_CONFIG.description,
+    // Module 26 §27. A relative canonical is resolved by Next against
+    // metadataBase AND the current route, so every page self-canonicalises
+    // instead of every page pointing at the homepage. Language alternates are
+    // additionally advertised by next-intl as a `Link` response header.
+    alternates: {
+      canonical: './',
+    },
     openGraph: {
       title: t('appName'),
       description: SITE_CONFIG.description,
       type: 'website',
+      locale,
+      siteName: t('appName'),
     },
     twitter: {
       card: 'summary_large_image',
