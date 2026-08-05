@@ -1,12 +1,14 @@
 # Module 26, Secure Deployment, Production Verification and Launch Readiness
 
-**Staging status: `STAGING_NOT_READY`**
-**Production status: `PRODUCTION_NOT_READY`**
-**Launch decision: NOT LAUNCHED. Awaiting project-owner deployment actions.**
+**Deployment status: `DEPLOYED_AND_VERIFIED`** at **https://www.sharedblood.com**
+**Production status: `PRODUCTION_READY_WITH_ACCEPTED_LOW_RISK_ITEMS`**
+**Launch decision: NOT YET ANNOUNCED. Four items remain, one of which is a genuine verification gap.**
 
-Both statuses are **blocked on account access, not on code quality.** Everything that can be built, verified and documented without a GitHub account, a hosting account or a domain has been completed and passes. Nothing has been pushed, deployed or announced.
+The site is live and every automated check passes: **198/198** against production, covering security headers, CSP, HTTPS, HSTS, the HTTP redirect, canonical origins, XSS and redirect payloads, HTTP methods, disclosure paths, preview-route blocking, caching and every product surface in both locales.
 
-The single sentence version: **the release candidate is ready and fully verified locally; it has never left this machine.**
+What is **not** yet done before a public announcement: an interactive pass over the five genetics tools in an ordinary browser, an OWASP ZAP baseline scan, a published security contact, and monitoring configuration. See §33 and §34.
+
+> An earlier revision of this report recorded `STAGING_NOT_READY` / `PRODUCTION_NOT_READY`. Those were accurate at the time: nothing had been pushed or deployed. Sections below marked "not testable" have been superseded by §33.
 
 ---
 
@@ -15,9 +17,10 @@ The single sentence version: **the release candidate is ready and fully verified
 | | |
 |---|---|
 | **Done** | Git repository, tracked-file audit, CI and Dependabot workflows, CodeQL via default setup, environment template, canonical URLs and sitemap, a defect fix found during verification, 193-check deployment verification script, full local production verification, operations documentation |
-| **Not done** | Push to GitHub, repository security settings, CI execution, CodeQL scan, Vercel project, staging deployment, domain, DNS, HTTPS, ZAP scan against a deployment, production deployment, release tag, launch |
+| **Done since, by the owner** | GitHub repository created and pushed, repository security settings, branch protection ruleset, CI execution (green), CodeQL via default setup, Vercel project, domain, DNS, HTTPS. All verified in §33 |
+| **Still not done** | Interactive genetics-tool pass in an ordinary browser, OWASP ZAP baseline scan, published security contact, monitoring configuration, `v1.0.0` release tag, public announcement. See §34 |
 
-Everything in the second column requires credentials I must not handle. §6 of the PRD anticipates this and directs that such items be recorded rather than guessed; §47 requires an explicit final launch decision, which is yours.
+The middle row required credentials this module must not handle, so it was performed by the project owner and then verified. §47 requires an explicit final launch decision, which remains yours.
 
 The owner-facing procedure is [`docs/operations/deployment-runbook.md`](../operations/deployment-runbook.md), an eleven-step sequence with a verification command after each step.
 
@@ -25,17 +28,18 @@ The owner-facing procedure is [`docs/operations/deployment-runbook.md`](../opera
 
 | Field | Value |
 |---|---|
-| Deployment provider | **Vercel** (selected; project not yet created) |
-| Repository provider | **GitHub** (selected; repository not yet created) |
-| Production branch | `main` |
-| Production commit hash | `c513838210649b2071a7d6c3b482480c510ca054` |
-| Commits | 4 |
+| Deployment provider | **Vercel** |
+| Repository provider | **GitHub** |
+| Production branch | `main`, protected |
+| Deployed commit | `b9bff32` at time of verification (see git history for the current head) |
 | Tracked files | 525 |
 | Node version | Verified locally on **24.18.0**; `.nvmrc` pins **22**; CI matrix covers **22 and 24** |
 | Package manager | npm **11.16.0** |
 | Clean-install result | `npm ci`, **414 packages**, pass |
-| Staging URL | `NOT_DEPLOYED` |
-| Production URL | `NOT_DEPLOYED` |
+| Repository URL | https://github.com/LAF1225/Shared-Blood-Project (public) |
+| Staging URL | Not used; verified directly against production |
+| **Production URL** | **https://www.sharedblood.com** (canonical host: `www`) |
+| Apex behaviour | `sharedblood.com` → 307 → `www.sharedblood.com` |
 
 A Node note worth flagging: the release was verified on Node 24, but `.nvmrc` pins 22 because that is Vercel's stable default for Next 15. Rather than assert an untested combination, CI runs the whole gate on **both**, so whichever the hosting platform uses is proven before any deploy.
 
@@ -60,22 +64,22 @@ A `.gitattributes` was added to normalise line endings, so a Windows working tre
 
 ## 4. Repository security verification (§6)
 
-Every item here requires the GitHub account and is therefore **`PROJECT_OWNER_ACTION_REQUIRED`**. The PRD's incoming header states account setup is confirmed complete by the owner; these are the repository-specific settings that can only be applied once the repository exists.
+All applied by the project owner and verified where externally observable.
 
 | Control | Status |
 |---|---|
-| MFA on the repository account | `PROJECT_OWNER_CONFIRMED` (per PRD header) |
-| Secret scanning | `PROJECT_OWNER_ACTION_REQUIRED`, runbook step 1 |
-| **Push protection** | `PROJECT_OWNER_ACTION_REQUIRED`, **enable before the first push** |
-| Dependency graph and Dependabot | Config committed; enable in settings |
-| CodeQL | Enabled via GitHub default setup; see §6 below |
-| Production branch protected | `PROJECT_OWNER_ACTION_REQUIRED`, runbook step 2 |
-| Force pushes and deletion restricted | `PROJECT_OWNER_ACTION_REQUIRED` |
-| Required CI checks configured | Workflow committed; select as required checks after the first run |
-| Least-privilege collaborators | `PROJECT_OWNER_ACTION_REQUIRED` |
-| No unknown deploy keys or apps | `PROJECT_OWNER_ACTION_REQUIRED` |
+| MFA on the repository account | **`PROJECT_OWNER_CONFIRMED`** |
+| Secret scanning | **Enabled** |
+| **Push protection** | **Enabled** |
+| Dependency graph and Dependabot | **Enabled.** Currently reporting 12 advisories, all assessed unreachable, see §8 |
+| CodeQL | **Enabled** via GitHub default setup; see §6 |
+| Production branch protected | **Active ruleset**, verified functionally: a direct push to `main` was rejected with `GH013` |
+| Force pushes and deletion restricted | **Enabled** (non-fast-forward and deletion rules) |
+| Required CI checks configured | **`Quality gates (Node 22)`** and **`Quality gates (Node 24)`**, both required |
+| Least-privilege collaborators | Sole owner |
+| No unknown deploy keys or apps | `PROJECT_OWNER_CONFIRMED` |
 
-Push protection is called out because it is the only control on this list that prevents a mistake rather than reporting one after the fact.
+One deliberate choice: **required approving reviews is set to `0`.** GitHub does not permit approving one's own pull request, so any higher value would deadlock a sole maintainer. Every change still passes CI before it can land, which is the substantive protection.
 
 ## 5. CI pipeline (§7)
 
@@ -88,7 +92,9 @@ Push protection is called out because it is the only control on this list that p
 - **Secrets:** none are exposed to pull-request checks, because the project has none. The build runs with `NEXT_PUBLIC_SITE_URL=https://ci.invalid`, which also proves the build needs no real configuration.
 - **Action pinning:** first-party `actions/*` and `github/*` at major version tags, which §7 permits ("reviewed versions **or** commit identifiers"). Upgrading to commit SHAs is a reasonable later hardening; Dependabot is configured to keep them current.
 
-**Result: `CI_CREATED_NOT_YET_RUN`.** It cannot execute without a remote. Every command it runs was executed locally and passes (§10).
+**Result: `CI_PASSING`.** Green on `48d5fc5` and `b9bff32` across both Node versions.
+
+The first run failed, usefully. The TypeScript step failed on both Node versions while passing locally, because `next-env.d.ts` sits in Next's default `.gitignore` but carries the `next/image-types/global` reference that declares the PNG module type for the static logo import. CI type-checks before building, so on a clean checkout the file did not exist. Fixed by tracking the file; the fix was validated against a fresh clone with `npm ci` rather than the working tree that had hidden the problem in the first place.
 
 ### One deliberate deviation, stated plainly
 
@@ -414,3 +420,89 @@ Calling this "ready" would mean asserting that headers survive a CDN, that a cer
 5. Submit the sitemap to search consoles once the domain is live.
 6. Revisit the Kashmir boundary amendment if Survey of Pakistan vector data is obtained.
 7. Revise the threat model **before** shipping any form, API, database, analytics or account system.
+
+---
+
+# 33. Production deployment verification
+
+Performed against **https://www.sharedblood.com** after the domain was connected and the canonical origin corrected. Supersedes every "not testable" entry above.
+
+## 33.1 Result
+
+`node scripts/verify-deployment.mjs https://www.sharedblood.com` → **198 passed, 0 failed.**
+
+## 33.2 Domain, DNS and HTTPS (§26, §28)
+
+| Check | Result |
+|---|---|
+| Canonical hostname | `www.sharedblood.com` |
+| Apex redirect | `https://sharedblood.com/en` → **307** → `https://www.sharedblood.com/en` |
+| HTTP to HTTPS | **308** on both hosts |
+| TLS certificate | Valid, `ssl_verify_result = 0`, no browser warning |
+| HSTS on HTTPS responses | `max-age=31536000; includeSubDomains`, no `preload` |
+| Mixed content | **None.** Zero `http://` sub-resources in the rendered page |
+
+## 33.3 Security headers, live (§24)
+
+All nine present on eight targets spanning both locales, a disease page, the calculator, the map and a not-found route, with **one distinct CSP** across all of them and **no `x-powered-by`**.
+
+`Content-Security-Policy`, `Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options`, `Cross-Origin-Opener-Policy`, `Cross-Origin-Resource-Policy`, `X-DNS-Prefetch-Control`.
+
+**Vercel did not strip, weaken, duplicate or override the CSP.** That was the largest open risk of the hosting step and it is now closed. Confirmed in a real browser: **zero console output, so zero CSP violations**, and 22 self-hosted font faces loading under `font-src 'self'`.
+
+## 33.4 Canonical URLs (§27)
+
+One defect was found and fixed here. The first deployment set `NEXT_PUBLIC_SITE_URL` to the **apex**, while `www` is the primary host. Every canonical tag and all 72 sitemap URLs therefore pointed at a hostname that immediately 307s, giving crawlers contradictory signals.
+
+Corrected to `https://www.sharedblood.com` and **redeployed**, since canonical tags and the sitemap are baked in at build time and an environment-variable change alone does not rebuild them.
+
+| Check | Result |
+|---|---|
+| Canonical, per route | `https://www.sharedblood.com/en`, `.../ur/diseases/beta-thalassemia` |
+| Sitemap | 72 URLs, all on the canonical origin |
+| robots.txt | `Host:` and `Sitemap:` both on the canonical origin |
+| `localhost` / `127.0.0.1` / `vercel.app` in served HTML | **0 occurrences** |
+
+## 33.5 Payloads, methods and disclosure (§30, §32)
+
+XSS markers escaped; `?next=` and `?redirect=javascript:` produce no redirect; path traversal exposes nothing; `PUT`/`PATCH`/`DELETE` return **405** while `GET`/`HEAD` return 200; `/.env`, `/.env.local`, `/.git/config`, `/package-lock.json`, `/coverage/`, `/.next/`, `/next.config.mjs`, `/src/middleware.ts` all inaccessible; unknown routes leak no stack trace or filesystem path.
+
+## 33.6 Product surfaces (§14, §19, §21, §22, §23)
+
+| Surface | Result |
+|---|---|
+| Five genetics tools | All serve `h1` plus full interactive markup: calculator 12 buttons / 4 inputs / 38 SVG, DNA Explorer 10 / 4 / 30, Punnett 10 / 3 / 31, Relationship 10 / 6 / 30, Evidence Map 24 buttons / 3 selects / 49 SVG |
+| Four disease pages | 200, `h1`, no missing translations, both locales |
+| Urdu | `dir="rtl"` throughout; 46,000 to 53,000 Urdu characters per page; **no `MISSING_MESSAGE` anywhere** |
+| Six preview routes | Blocked in production |
+| Family Tree | Retired |
+| Caching | Unknown slugs not cached long-lived; headers survive cache hits |
+| Console | Clean |
+
+## 33.7 Repository and CI (§5, §6, §7)
+
+| Item | Result |
+|---|---|
+| Repository | https://github.com/LAF1225/Shared-Blood-Project, public |
+| Push audit | Remote tree confirmed free of env, build and credential files |
+| CI | **Green** on `48d5fc5` and `b9bff32`, Node 22 and 24 |
+| Branch protection | Ruleset **active**: deletions restricted, force pushes blocked, PR required (0 approvals), both CI jobs required. Functionally verified: a direct push to `main` was rejected with `GH013` |
+| Secret scanning, push protection, Dependabot | Enabled |
+| CodeQL | `CODEQL_ENABLED_VIA_GITHUB_DEFAULT_SETUP`, see §6 |
+| GitHub MFA | `PROJECT_OWNER_CONFIRMED` |
+
+Two CI defects were found and fixed by the first push, both recorded in git history: a gitignored `next-env.d.ts` breaking the type check on a clean checkout, and Dependabot opening major-version upgrade PRs that correctly failed CI.
+
+# 34. Remaining items before public announcement
+
+| # | Item | Who | Why it matters |
+|---|---|---|---|
+| 1 | **Interactive pass over the five genetics tools** in an ordinary browser, English and Urdu, desktop and mobile | Owner | The one genuine verification gap. The preview harness parks client components behind Suspense in a hidden container, so interactive behaviour could not be exercised. Markup, hydration, zero console errors and the canonical engine test suite all pass, but that is not the same as clicking through and reading a probability |
+| 2 | **OWASP ZAP baseline scan** (§29) | Owner | Not installed in the build environment. The checks a baseline performs were all done directly, but §29 warns against dismissing informational findings merely because a site is static |
+| 3 | **Publish a security contact** (§38) | Owner | A researcher who cannot find an address will either post publicly or give up |
+| 4 | **Configure monitoring** (§37) | Owner | Uptime, certificate expiry, deployment failures. Approved signals only; the prohibited list in §42 is a hard constraint |
+| 5 | Tag `v1.0.0` | Owner | After items 1 to 4 |
+
+Cross-browser coverage (Firefox, Safari, a physical mobile device) also remains untested; only Chromium was available.
+
+**None of these is a security defect.** There are no open S0, S1 or S2 findings, and the five accepted low-risk items in §30 are unchanged.
