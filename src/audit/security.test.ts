@@ -470,6 +470,30 @@ describe('§21/§30.17 assets resolve only through expected files', () => {
     expect(svgs).toEqual([]);
   });
 
+  it('publishes a valid, unexpired security contact (RFC 9116)', () => {
+    // An expired security.txt is invalid per RFC 9116, and a stale one is
+    // arguably worse than none: it advertises a channel nobody is watching.
+    // When this test starts failing, that is the signal to renew the file,
+    // not to delete the assertion.
+    const file = join(PUBLIC, '.well-known', 'security.txt');
+    expect(existsSync(file)).toBe(true);
+
+    const text = readFileSync(file, 'utf8');
+    const field = (name: string) =>
+      text.split('\n').find((line) => line.toLowerCase().startsWith(`${name}:`));
+
+    expect(field('contact'), 'Contact is required by RFC 9116').toBeDefined();
+    const expires = field('expires');
+    expect(expires, 'Expires is required by RFC 9116').toBeDefined();
+
+    const expiryDate = new Date(expires!.split(/:(.+)/)[1].trim());
+    expect(Number.isNaN(expiryDate.getTime())).toBe(false);
+    expect(
+      expiryDate.getTime(),
+      `security.txt expired on ${expiryDate.toISOString()}; renew it`,
+    ).toBeGreaterThan(Date.now());
+  });
+
   it('resolves the production audio asset that content references', () => {
     // Preview-only and test-fixture media live behind NODE_ENV guards and are
     // deliberately excluded; only assets reachable in production count here.
