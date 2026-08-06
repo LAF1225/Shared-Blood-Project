@@ -44,6 +44,14 @@ updates:
       # Security updates are unaffected by this rule and still arrive.
       - dependency-name: '*'
         update-types: [version-update:semver-major]
+      # Pre-1.0 packages carry no stability guarantee, so semver "minor" means
+      # very little for them. The first run proved the point by grouping
+      # lucide-react 0.469.0 -> 0.577.0 in with two React patch bumps as
+      # routine "production patches": 108 releases of an icon library, which
+      # a type check cannot evaluate because a changed icon still compiles.
+      # Restrict pre-1.0 dependencies to patch updates only.
+      - dependency-name: lucide-react
+        update-types: [version-update:semver-minor]
 
   - package-ecosystem: github-actions
     directory: /

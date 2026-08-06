@@ -1,14 +1,14 @@
 # Module 26, Secure Deployment, Production Verification and Launch Readiness
 
-**Deployment status: `DEPLOYED_AND_VERIFIED`** at **https://www.sharedblood.com**
-**Production status: `PRODUCTION_READY_WITH_ACCEPTED_LOW_RISK_ITEMS`**
-**Launch decision: NOT YET ANNOUNCED. Four items remain, one of which is a genuine verification gap.**
+**Production status: `PRODUCTION_READY_FOR_PUBLIC_LAUNCH`**
+**Launch decision: LAUNCHED. Publicly announced by the project owner on 2026-08-06.**
+**Release: `v1.0.0` at commit `1bb1e12`, live at https://www.sharedblood.com**
 
-The site is live and every automated check passes: **198/198** against production, covering security headers, CSP, HTTPS, HSTS, the HTTP redirect, canonical origins, XSS and redirect payloads, HTTP methods, disclosure paths, preview-route blocking, caching and every product surface in both locales.
+Every automated check passes: **198/198** against production, covering security headers, CSP, HTTPS, HSTS, the HTTP redirect, canonical origins, XSS and redirect payloads, HTTP methods, disclosure paths, preview-route blocking, caching and every product surface in both locales. **No open S0, S1 or S2 findings.**
 
-What is **not** yet done before a public announcement: an interactive pass over the five genetics tools in an ordinary browser, an OWASP ZAP baseline scan, a published security contact, and monitoring configuration. See §33 and §34.
+All five pre-announcement items are closed (§34). Two carry documented caveats worth reading rather than skimming: the ZAP result is owner-reported without a retained record, and cross-browser testing beyond Chromium was never performed.
 
-> An earlier revision of this report recorded `STAGING_NOT_READY` / `PRODUCTION_NOT_READY`. Those were accurate at the time: nothing had been pushed or deployed. Sections below marked "not testable" have been superseded by §33.
+> Earlier revisions recorded `STAGING_NOT_READY` / `PRODUCTION_NOT_READY`, then `PRODUCTION_READY_WITH_ACCEPTED_LOW_RISK_ITEMS`. Each was accurate when written. Sections below marked "not testable" are superseded by §33.
 
 ---
 
@@ -493,16 +493,42 @@ XSS markers escaped; `?next=` and `?redirect=javascript:` produce no redirect; p
 
 Two CI defects were found and fixed by the first push, both recorded in git history: a gitignored `next-env.d.ts` breaking the type check on a clean checkout, and Dependabot opening major-version upgrade PRs that correctly failed CI.
 
-# 34. Remaining items before public announcement
+# 34. Pre-announcement items: all closed
 
-| # | Item | Who | Why it matters |
-|---|---|---|---|
-| 1 | **Interactive pass over the five genetics tools** in an ordinary browser, English and Urdu, desktop and mobile | Owner | The one genuine verification gap. The preview harness parks client components behind Suspense in a hidden container, so interactive behaviour could not be exercised. Markup, hydration, zero console errors and the canonical engine test suite all pass, but that is not the same as clicking through and reading a probability |
-| 2 | **OWASP ZAP baseline scan** (§29) | Owner | Not installed in the build environment. The checks a baseline performs were all done directly, but §29 warns against dismissing informational findings merely because a site is static |
-| 3 | **Publish a security contact** (§38) | Owner | A researcher who cannot find an address will either post publicly or give up |
-| 4 | **Configure monitoring** (§37) | Owner | Uptime, certificate expiry, deployment failures. Approved signals only; the prohibited list in §42 is a hard constraint |
-| 5 | Tag `v1.0.0` | Owner | After items 1 to 4 |
+| # | Item | Status |
+|---|---|---|
+| 1 | Interactive pass over the five genetics tools, English and Urdu, desktop and mobile | **Owner-confirmed.** This was the one gap automation could not close: the preview harness parks client components behind Suspense in a hidden container, so markup, hydration and a clean console were verifiable but actually using a tool was not |
+| 2 | OWASP ZAP baseline scan (§29) | **Owner-reported clean.** Caveat below |
+| 3 | Publish a security contact (§38) | **Done.** `/.well-known/security.txt`, RFC 9116, live and returning 200 with `Contact`, `Expires`, `Preferred-Languages` and `Canonical` |
+| 4 | Configure monitoring (§37) | **Owner-confirmed.** Uptime service configured |
+| 5 | Tag `v1.0.0` | **Done**, at `1bb1e12` |
 
-Cross-browser coverage (Firefox, Safari, a physical mobile device) also remains untested; only Chromium was available.
+## 34.1 ZAP record, stated honestly
 
-**None of these is a security defect.** There are no open S0, S1 or S2 findings, and the five accepted low-risk items in §30 are unchanged.
+`ZAP_BASELINE_CLEAN_RECORD_NOT_RETAINED`.
+
+Mode baseline, target the production URL, run 2026-08-05, reported clean. **Version, alert counts and evidence were not retained and the tool has since been uninstalled**, so the result is not independently reproducible. §29 asks for all of those, so this is a partial record.
+
+It is not a launch blocker: a clean baseline was run against the right target in the right mode, and every class of check a baseline performs was independently verified by the 198-check suite. But it is weaker than §29 wants, and recording it as an unqualified pass would misrepresent it.
+
+The scan also predates commit `1bb1e12`. Everything merged since is documentation and a static text file, so the security posture is unchanged.
+
+**Recommended follow-up:** run ZAP as a `workflow_dispatch` CI job using `zaproxy/action-baseline`, which saves an HTML report as a build artifact. The record then cannot be lost, and re-running needs no local install.
+
+## 34.2 Security contact design note
+
+The owner declined a visible security section on the contact page, on the grounds that it would consume space and could confuse visitors. That objection is sound, and `security.txt` sidesteps it completely: the file is served at a fixed path that only scanners and researchers request, and appears in no navigation, on no page and in no sitemap. It reuses the address already published, so there is nothing additional to monitor.
+
+A test asserts the `Expires` field is still in the future. An expired `security.txt` is invalid under RFC 9116 and worse than none, because it advertises a channel nobody is reading. When that test fails, renew the file.
+
+## 34.3 Still untested
+
+**Cross-browser coverage.** Only Chromium was available: Firefox, Safari and a physical mobile device were never exercised by automation. The owner's manual pass covered desktop and mobile, but a rendering fault specific to Safari or Firefox would not have been caught by anything in this report.
+
+**None of the above is a security defect.** No open S0, S1 or S2 findings, and the five accepted low-risk items in §30 are unchanged.
+
+# 35. Launch
+
+Publicly announced by the project owner on **2026-08-06**, following completion of every item in §34.
+
+Final status: **`PRODUCTION_READY_FOR_PUBLIC_LAUNCH`**.
