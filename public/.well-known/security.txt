@@ -1,0 +1,14 @@
+# Shared Blood security contact (RFC 9116).
+#
+# This file is deliberately invisible to visitors: it lives at a fixed path
+# that only scanners and security researchers request. It appears in no
+# navigation, on no page, and in no sitemap.
+#
+# Shared Blood is a static educational site with no accounts, no database and
+# no server mutation endpoints, so the realistic report is a content or
+# configuration issue rather than a data breach. Reports are still welcome.
+
+Contact: mailto:sharedblood.org@gmail.com
+Expires: 2027-08-06T00:00:00.000Z
+Preferred-Languages: en, ur
+Canonical: https://www.sharedblood.com/.well-known/security.txt
