@@ -1,13 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import {
-  SharedBloodInCommunity,
-  PUBLIC_DATASET,
-  PUBLIC_FINDINGS,
-  COMMUNITY_ACTIVITIES,
-  COMMUNITY_PHOTOS,
-} from '@/features/community';
-import type { ActivityType, FieldworkCity } from '@/features/community';
+import { CommunityPage, COMMUNITY_ACTIVITIES, COMMUNITY_PHOTOS } from '@/features/community';
 
 export async function generateMetadata({
   params,
@@ -20,43 +13,17 @@ export async function generateMetadata({
 }
 
 /**
- * "Shared Blood in the Community" — public community impact & fieldwork page
- * (Module 17). The route resolves the translator and passes the PRODUCTION public
- * data to the synchronous page component. The production dataset is empty until
- * real fieldwork has been documented, impact-verified, privacy-reviewed, and
- * approved (spec §40/§48), so the page currently renders the overview, the §48
- * "being documented" state, and the methodology framing — never fabricated
- * activities or impact.
- *
- * Server-side deep-links (spec §35/§37/§47): `?activity=` opens a public activity
- * page; `?type/city/year=` drive the archive filters. All are validated.
+ * "Shared Blood in the Community": Shared Blood's ongoing community activities
+ * and their photos. Fully static.
  */
-export default async function CommunityPage({
+export default async function CommunityRoute({
   params,
-  searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ activity?: string; type?: string; city?: string; year?: string }>;
 }) {
   const { locale } = await params;
-  const { activity, type, city, year } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'Community' });
 
-  return (
-    <SharedBloodInCommunity
-      dataset={PUBLIC_DATASET}
-      findings={PUBLIC_FINDINGS}
-      highlights={COMMUNITY_ACTIVITIES}
-      photos={COMMUNITY_PHOTOS}
-      locale={locale}
-      t={t}
-      selectedActivityId={activity ?? null}
-      filters={{
-        type: (type as ActivityType) ?? 'all',
-        city: (city as FieldworkCity) ?? 'all',
-        year: year ?? 'all',
-      }}
-    />
-  );
+  return <CommunityPage activities={COMMUNITY_ACTIVITIES} photos={COMMUNITY_PHOTOS} locale={locale} t={t} />;
 }

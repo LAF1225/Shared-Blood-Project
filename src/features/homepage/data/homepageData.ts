@@ -1,5 +1,4 @@
 import type { LocalizedText } from '@/types';
-import { DISEASE_IDS } from '@/constants/diseases';
 import { ROUTES } from '@/constants/routes';
 import { getFeaturedDiseases } from '@/features/diseases/data/diseases';
 
@@ -23,42 +22,6 @@ export interface FeaturedDiseaseCard {
 export const featuredDiseases: FeaturedDiseaseCard[] = getFeaturedDiseases().map(
   (disease) => ({ id: disease.id, slug: disease.slug, name: disease.name }),
 );
-
-/**
- * Awareness statistics — placeholder/configurable (spec: "No hardcoded values").
- * `disordersCovered` is derived from the library; the rest resolve from
- * configurable data sources in future modules and show "—" until then.
- */
-export interface AwarenessStat {
-  id: string;
-  value: string;
-  label: LocalizedText;
-}
-
-const PENDING = ',';
-
-export const awarenessStats: AwarenessStat[] = [
-  {
-    id: 'disorders',
-    value: String(DISEASE_IDS.length),
-    label: { en: 'Disorders covered', ur: 'شامل امراض' },
-  },
-  {
-    id: 'resources',
-    value: PENDING,
-    label: { en: 'Educational resources', ur: 'تعلیمی وسائل' },
-  },
-  {
-    id: 'survey',
-    value: PENDING,
-    label: { en: 'Survey responses collected', ur: 'جمع شدہ سروے جوابات' },
-  },
-  {
-    id: 'partners',
-    value: PENDING,
-    label: { en: 'Partner organizations', ur: 'شراکت دار ادارے' },
-  },
-];
 
 /** Parent resource categories — all link to the Parent Learning Centre. */
 export interface ResourceCategory {
