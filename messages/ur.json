@@ -294,11 +294,27 @@
     "noResultsTitle": "کوئی وسیلہ نہیں ملا",
     "noResultsBody": "کوئی اور اصطلاح آزمائیں یا تمام وسائل دیکھنے کے لیے فلٹر صاف کریں۔",
     "clearFilters": "فلٹر صاف کریں",
-    "downloadsSubtitle": "گھر پر آپ کی مدد کے لیے قابلِ پرنٹ مواد۔ فائلیں ڈاؤن لوڈ سینٹر میں دستیاب ہوں گی۔",
+    "downloadsSubtitle": "گھر پر آپ کی مدد کے لیے مفت قابلِ پرنٹ چیک لسٹیں، کتابچے اور انفوگرافکس۔",
     "relatedDiseasesSubtitle": "شیئرڈ بلڈ پر شامل حالتوں کے بارے میں مزید جانیں۔",
     "download": "ڈاؤن لوڈ",
+    "downloadLabel": "{title} ڈاؤن لوڈ کریں",
     "downloadComingSoon": "جلد دستیاب",
     "downloadPreparedHint": "فائلیں ڈاؤن لوڈ سینٹر میں منظم ہوتی ہیں",
+    "fileLanguages": {
+      "bilingual": "انگریزی اور اردو",
+      "en": "انگریزی"
+    },
+    "resourceTitles": {
+      "understanding-inherited-disorders": "موروثی جینیاتی امراض کو سمجھنا",
+      "early-symptoms-guide": "ابتدائی علامات کی پہچان",
+      "development-milestones": "نشوونما کے سنگِ میل",
+      "caregiver-handbook": "نگہداشت کنندگان کے لیے تعلیمی کتابچہ",
+      "hospital-preparation-guide": "طبی اپائنٹمنٹس کی تیاری",
+      "feeding-support": "خوراک اور غذائیت کی مدد",
+      "emotional-wellbeing": "خاندانوں کے لیے جذباتی سکون",
+      "school-support": "اسکول اور تعلیم میں مدد",
+      "recognising-developmental-delays": "نشوونما میں تاخیر کی پہچان"
+    },
     "page": {
       "version": "ورژن",
       "updated": "تازہ کاری",
