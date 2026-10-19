@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { WhatPakistanKnows, PUBLIC_DATASET, PUBLIC_FINDINGS } from '@/features/survey';
+import { WhatPakistanKnows, PUBLIC_DATASET, PUBLIC_FINDINGS, SURVEY_FORM } from '@/features/survey';
 
 export async function generateMetadata({
   params,
@@ -13,12 +13,11 @@ export async function generateMetadata({
 }
 
 /**
- * "What Pakistan Knows" — public survey findings (Module 16). The route resolves
- * the translator and passes the PRODUCTION aggregate data to the synchronous
- * page component. The production dataset is empty until a real survey has been
- * collected, cleaned offline, aggregated, and approved (spec §44/§69), so the
- * page currently renders the overview, the "findings being prepared" state, and
- * the methodology framing — never fabricated statistics.
+ * "What Pakistan Knows" — the public survey (Module 16). Invites people to the
+ * live Google Form, then shows aggregate findings. The production dataset is
+ * empty until responses have been aggregated and approved (spec §44/§69), so
+ * the page shows the invitation, the "findings being prepared" state and the
+ * methodology — never fabricated statistics.
  */
 export default async function SurveyPage({
   params,
@@ -29,5 +28,13 @@ export default async function SurveyPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'Survey' });
 
-  return <WhatPakistanKnows dataset={PUBLIC_DATASET} findings={PUBLIC_FINDINGS} locale={locale} t={t} />;
+  return (
+    <WhatPakistanKnows
+      dataset={PUBLIC_DATASET}
+      findings={PUBLIC_FINDINGS}
+      form={SURVEY_FORM}
+      locale={locale}
+      t={t}
+    />
+  );
 }

@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { SharedBloodInCommunity, PUBLIC_DATASET, PUBLIC_FINDINGS } from '@/features/community';
+import {
+  SharedBloodInCommunity,
+  PUBLIC_DATASET,
+  PUBLIC_FINDINGS,
+  COMMUNITY_ACTIVITIES,
+  COMMUNITY_PHOTOS,
+} from '@/features/community';
 import type { ActivityType, FieldworkCity } from '@/features/community';
 
 export async function generateMetadata({
@@ -41,6 +47,8 @@ export default async function CommunityPage({
     <SharedBloodInCommunity
       dataset={PUBLIC_DATASET}
       findings={PUBLIC_FINDINGS}
+      highlights={COMMUNITY_ACTIVITIES}
+      photos={COMMUNITY_PHOTOS}
       locale={locale}
       t={t}
       selectedActivityId={activity ?? null}

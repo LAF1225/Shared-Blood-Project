@@ -13,6 +13,8 @@
 export { WhatPakistanKnows } from './components/WhatPakistanKnows';
 
 export { PUBLIC_DATASET, PUBLIC_FINDINGS } from './data/dataset';
+export { SURVEY_FORM } from './data/form';
+export type { SurveyFormInfo } from './data/form';
 export { SURVEY_QUESTIONS, getSurveyQuestion } from './data/questions';
 export { GENETIC_LITERACY_INDICATOR } from './data/indicator';
 
