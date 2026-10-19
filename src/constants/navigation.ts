@@ -121,7 +121,6 @@ export const PRIMARY_NAV: readonly NavEntry[] = [
     children: [
       { id: 'about', href: ROUTES.about, labelKey: 'aboutSharedBlood' },
       { id: 'community', href: ROUTES.community, labelKey: 'community' },
-      { id: 'research', href: ROUTES.research, labelKey: 'research' },
       { id: 'policy', href: ROUTES.policy, labelKey: 'policy' },
     ],
   },
@@ -157,7 +156,6 @@ export const FOOTER_NAV: readonly NavItem[] = [
   { id: 'resources', href: ROUTES.resources, labelKey: 'resources' },
   { id: 'survey', href: ROUTES.survey, labelKey: 'survey' },
   { id: 'community', href: ROUTES.community, labelKey: 'community' },
-  { id: 'research', href: ROUTES.research, labelKey: 'research' },
   { id: 'policy', href: ROUTES.policy, labelKey: 'policy' },
   // Hospitals removed from the footer too (Module 24 §63). Contact is a real
   // page (project email), so it stays.
