@@ -32,11 +32,19 @@ export type ResourceType = 'booklet' | 'guide' | 'development';
 /** Downloadable file formats (spec §14). Files themselves come from Module 15. */
 export type DownloadFormat = 'pdf' | 'infographic' | 'checklist' | 'poster';
 
+/** Languages printed in a downloadable file: both side by side, or English only. */
+export type DownloadLanguages = 'bilingual' | 'en';
+
 export interface ResourceDownload {
   format: DownloadFormat;
-  /** Provided by the Downloads module (Module 15). Undefined = prepared/pending. */
+  /**
+   * Public path of the file under `public/` (e.g. `/resources/<slug>.pdf`).
+   * Undefined = prepared/pending. Existence and size are checked by
+   * `downloads.test.ts`.
+   */
   fileUrl?: string;
   sizeLabel?: string;
+  languages?: DownloadLanguages;
 }
 
 /** A prose block within a resource's educational content (spec §7). */

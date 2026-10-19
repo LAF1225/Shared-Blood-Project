@@ -294,11 +294,27 @@
     "noResultsTitle": "No resources found",
     "noResultsBody": "Try a different search term or clear the filters to see all resources.",
     "clearFilters": "Clear filters",
-    "downloadsSubtitle": "Printable materials to support you at home. Files become available in the Downloads Centre.",
+    "downloadsSubtitle": "Free printable checklists, booklets and infographics to support you at home.",
     "relatedDiseasesSubtitle": "Learn more about the conditions covered on Shared Blood.",
     "download": "Download",
+    "downloadLabel": "Download {title}",
     "downloadComingSoon": "Available soon",
     "downloadPreparedHint": "Files are managed in the Downloads Centre",
+    "fileLanguages": {
+      "bilingual": "English & Urdu",
+      "en": "English"
+    },
+    "resourceTitles": {
+      "understanding-inherited-disorders": "Understanding Inherited Genetic Disorders",
+      "early-symptoms-guide": "Recognising Early Symptoms",
+      "development-milestones": "Development Milestones",
+      "caregiver-handbook": "Caregiver Learning Booklet",
+      "hospital-preparation-guide": "Preparing for Medical Appointments",
+      "feeding-support": "Feeding & Nutrition Support",
+      "emotional-wellbeing": "Emotional Wellbeing for Families",
+      "school-support": "School & Education Support",
+      "recognising-developmental-delays": "Recognising Developmental Delays"
+    },
     "page": {
       "version": "Version",
       "updated": "Updated",

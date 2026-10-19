@@ -151,7 +151,9 @@ export function LearningCentre() {
           </div>
           <ul className="grid gap-4 sm:grid-cols-2">
             {downloads.map((resource) => (
-              <li key={resource.id}>
+              // min-w-0 lets the card shrink so a long title wraps instead of
+              // pushing the download button off narrow screens.
+              <li key={resource.id} className="min-w-0">
                 <DownloadCard resource={resource} />
               </li>
             ))}

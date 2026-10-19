@@ -148,6 +148,9 @@ export function buildCrumbs(pathname: string): Crumb[] {
     let labelKey: string | null = null;
     if (parent === 'diseases' && DISEASE_SLUGS.has(segment)) {
       labelKey = `Diseases.${segment}`;
+    } else if (parent === 'resources') {
+      // Missing keys fall back to the prettified slug in the Breadcrumbs component.
+      labelKey = `Learning.resourceTitles.${segment}`;
     } else if (SEGMENT_LABEL_KEY[segment]) {
       labelKey = SEGMENT_LABEL_KEY[segment];
     }

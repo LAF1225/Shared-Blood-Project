@@ -10,6 +10,7 @@
 *.webp binary
 *.ico binary
 *.wav binary
+*.pdf binary
 *.mp3 binary
 *.woff binary
 *.woff2 binary

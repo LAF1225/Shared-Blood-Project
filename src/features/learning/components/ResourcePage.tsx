@@ -21,9 +21,9 @@ type Translator = (key: string, values?: Record<string, string | number>) => str
 
 /**
  * Educational resource page (spec §7). A reusable template that renders any
- * resource from structured data in the standard order — summary, educational
- * content, practical guidance, key takeaways, related resources, downloads, and
- * related diseases — showing only the parts that exist.
+ * resource from structured data in the standard order — summary, download,
+ * educational content, practical guidance, key takeaways, related resources,
+ * and related diseases — showing only the parts that exist.
  *
  * Synchronous by design: the async route resolves translators and passes them
  * in (same pattern as the Disease Page System).
@@ -75,6 +75,13 @@ export function ResourcePage({
             <p className="text-sm text-muted-foreground">{metaParts.join(' · ')}</p>
           )}
         </header>
+
+        {/* Download, near the top so the file is easy to find */}
+        {resource.download && (
+          <SectionShell id="downloads" title={t('page.downloads')}>
+            <DownloadCard resource={resource} />
+          </SectionShell>
+        )}
 
         {/* Educational content */}
         {hasContent && (
@@ -136,13 +143,6 @@ export function ResourcePage({
                 </li>
               ))}
             </ul>
-          </SectionShell>
-        )}
-
-        {/* Downloads */}
-        {resource.download && (
-          <SectionShell id="downloads" title={t('page.downloads')}>
-            <DownloadCard resource={resource} />
           </SectionShell>
         )}
 
