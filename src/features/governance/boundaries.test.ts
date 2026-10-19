@@ -11,13 +11,13 @@ import { GOVERNANCE_PAGES } from './data/pages';
 import { checkPublicClaim } from './publication';
 import { isRestrictedActivity, publicUserCanAccess, isFieldProhibited } from './resolvers';
 import { SAMPLE_RESEARCH_DATASET } from '@/features/research/preview/sampleDataset';
-import { SAMPLE_POLICY_DATASET } from '@/features/policy/preview/sampleDataset';
 
 /**
  * Privacy/ethics integrity + cross-module boundary tests (spec §36/§113/§120).
  * Module 20 is the governance layer: it must catch prohibited public claims, block
  * restricted activities and genetic-data collection, enforce least privilege, and
- * confirm that Modules 18 and 19 pass public-claim review (spec §113).
+ * confirm that Module 18 passes public-claim review (spec §113). The policy page's
+ * NTSPR brief runs the same check in `features/policy/ntspr.test.ts`.
  */
 
 /** ASSERTIVE public text of the Module 18 research sample (excludes the
@@ -29,24 +29,9 @@ const researchAssertive = SAMPLE_RESEARCH_DATASET.findings.flatMap((f) => [
   f.interpretation.approvedInterpretation.en,
 ]);
 
-/** ASSERTIVE public text of the Module 19 advocacy sample (excludes the
- * deliberately-negating "What This Advocacy Does Not Claim"). */
-const policyAssertive = SAMPLE_POLICY_DATASET.advocacyPriorities.flatMap((p) => [
-  p.title.en,
-  p.summary.en,
-  p.recommendedAction.en,
-  p.rationale.en,
-]);
-
 describe('governance boundaries (spec §36/§113/§120)', () => {
   it('Module 18 research findings pass public-claim review (spec §113)', () => {
     for (const text of researchAssertive) {
-      expect(checkPublicClaim(text).status).toBe('ALLOWED');
-    }
-  });
-
-  it('Module 19 advocacy priorities pass public-claim review (spec §113)', () => {
-    for (const text of policyAssertive) {
       expect(checkPublicClaim(text).status).toBe('ALLOWED');
     }
   });

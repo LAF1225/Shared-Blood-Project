@@ -134,7 +134,6 @@ describe('Module 25.6 §4 — canonical source drives desktop and mobile alike',
       '/resources',
       '/survey',
       '/community',
-      '/research',
       '/policy',
       '/about',
     ]) {
@@ -151,6 +150,12 @@ describe('Module 25.6 §4 — canonical source drives desktop and mobile alike',
       '/genetics/punnett-square',
       '/genetics/relationship-risk',
     ]);
+  });
+
+  it('lists About, Community and Policy under About, with no Research link anywhere', () => {
+    const about = PRIMARY_NAV.find((e) => e.id === 'about');
+    expect(about?.children?.map((c) => c.href)).toEqual(['/about', '/community', '/policy']);
+    expect(FOOTER_NAV.map((i) => i.href)).not.toContain('/research');
   });
 });
 
@@ -174,7 +179,6 @@ describe('Module 25.6 §8 — parent active states', () => {
     ['/survey', 'resources'],
     ['/about', 'about'],
     ['/community', 'about'],
-    ['/research', 'about'],
     ['/policy', 'about'],
   ];
 
@@ -187,6 +191,8 @@ describe('Module 25.6 §8 — parent active states', () => {
   it('returns undefined for routes outside the primary navigation', () => {
     expect(resolveActiveEntryId('/contact', PRIMARY_NAV)).toBeUndefined();
     expect(resolveActiveEntryId('/privacy', PRIMARY_NAV)).toBeUndefined();
+    // Research was removed from the About menu; its page is unlinked.
+    expect(resolveActiveEntryId('/research', PRIMARY_NAV)).toBeUndefined();
   });
 });
 

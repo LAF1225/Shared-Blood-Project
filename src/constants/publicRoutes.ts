@@ -41,8 +41,8 @@ export const PUBLIC_ROUTES: readonly PublicRoute[] = [
   { path: ROUTES.careSupport, priority: 0.8, changeFrequency: 'monthly' },
   { path: ROUTES.geneticTesting, priority: 0.8, changeFrequency: 'monthly' },
 
-  // Evidence and advocacy.
-  { path: ROUTES.research, priority: 0.6, changeFrequency: 'monthly' },
+  // Evidence and advocacy. /research is unlisted: it is no longer linked from
+  // the About menu or footer.
   { path: ROUTES.policy, priority: 0.6, changeFrequency: 'monthly' },
   { path: ROUTES.community, priority: 0.6, changeFrequency: 'monthly' },
   { path: ROUTES.survey, priority: 0.5, changeFrequency: 'monthly' },

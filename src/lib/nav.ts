@@ -106,6 +106,20 @@ const SEGMENT_LABEL_KEY: Record<string, string> = {
   downloads: 'Nav.downloads',
   contact: 'Nav.contact',
   search: 'Search.title',
+  'early-signs': 'Nav.earlySigns',
+  'care-support': 'Nav.careSupport',
+  'genetic-testing': 'Nav.geneticTesting',
+  community: 'Nav.community',
+  research: 'Nav.research',
+  policy: 'Nav.policy',
+  'inheritance-calculator': 'Nav.inheritanceCalculator',
+  'dna-explorer': 'Nav.dnaExplorer',
+  'punnett-square': 'Nav.punnettSquare',
+  'relationship-risk': 'Nav.relationshipExplorer',
+  'pakistan-map': 'Nav.map',
+  privacy: 'Footer.privacy',
+  ethics: 'Footer.ethics',
+  governance: 'Footer.governance',
 };
 
 export interface Crumb {
