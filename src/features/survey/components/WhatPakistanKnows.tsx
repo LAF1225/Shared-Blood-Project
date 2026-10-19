@@ -9,6 +9,8 @@ import { AttitudesSection } from './AttitudesSection';
 import { CityComparison } from './CityComparison';
 import { MethodologySection } from './MethodologySection';
 import { SurveyFindingsEmptyState } from './SurveyFindingsEmptyState';
+import { TakeTheSurvey } from './TakeTheSurvey';
+import type { SurveyFormInfo } from '../data/form';
 
 type Translator = (key: string, values?: Record<string, string | number>) => string;
 
@@ -29,9 +31,12 @@ export function WhatPakistanKnows({
   findings,
   locale,
   t,
+  form,
 }: {
   dataset: SurveyAggregateDataset | null;
   findings: readonly SurveyFindingRecord[];
+  /** The live survey to invite people to; omitted on the preview route. */
+  form?: SurveyFormInfo;
   locale: string;
   t: Translator;
 }) {
@@ -49,6 +54,8 @@ export function WhatPakistanKnows({
           </h1>
           <p className="text-lg leading-relaxed text-muted-foreground">{t('subtitle')}</p>
         </header>
+
+        {form && <TakeTheSurvey form={form} locale={locale} t={t} />}
 
         <SurveyOverview dataset={safeDataset} locale={locale} t={t} />
 

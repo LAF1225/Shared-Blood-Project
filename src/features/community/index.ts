@@ -14,6 +14,7 @@
 export { SharedBloodInCommunity } from './components/SharedBloodInCommunity';
 
 export { PUBLIC_DATASET, PUBLIC_FINDINGS } from './data/dataset';
+export { COMMUNITY_ACTIVITIES, COMMUNITY_PHOTOS } from './data/highlights';
 export { COMMUNITY_REFERENCES, getCommunityReference } from './data/references';
 
 export {
@@ -61,6 +62,8 @@ export type {
   CommunityFieldworkDataset,
   CommunityImpactFinding,
   CommunityImpactSummary,
+  CommunityActivityHighlight,
+  CommunityPhoto,
   FieldActivityRecord,
   PublicFieldActivityRecord,
   EducationalResourceRecord,

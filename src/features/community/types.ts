@@ -654,3 +654,33 @@ export interface CommunityViewState {
   selectedYear: string | 'all';
   selectedActivityId: string | null;
 }
+
+/* ------------------------------------------------------------------ *
+ * Ongoing activity highlights + photos (public page, outside §39 dataset)
+ * ------------------------------------------------------------------ */
+
+/**
+ * A short, qualitative description of ongoing community work. Deliberately
+ * carries no dates, counts or impact figures: those belong to the reviewed
+ * fieldwork dataset above, which stays empty until approved (spec §48).
+ */
+export interface CommunityActivityHighlight {
+  id: string;
+  title: LocalizedText;
+  /** Where the work happens: organisation and city. Never a precise address. */
+  place: LocalizedText;
+  summary: LocalizedText;
+  audience: LocalizedText;
+  /** Learning Centre resource used in this activity, linked from its card. */
+  resourceSlug?: string;
+}
+
+/** A consented photo of community work, served from `public/community/`. */
+export interface CommunityPhoto {
+  src: string;
+  width: number;
+  height: number;
+  alt: LocalizedText;
+  caption: LocalizedText;
+  activityId: string;
+}

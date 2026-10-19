@@ -152,7 +152,9 @@
       "title": "Share your voice",
       "explanation": "Our anonymous awareness survey helps us understand what communities know about inherited genetic disorders.",
       "importance": "Your participation shapes better educational resources and future public health reports.",
-      "cta": "Take the survey"
+      "cta": "Take the survey",
+      "opensInNewTab": "(opens Google Forms in a new tab)",
+      "formNote": "The survey opens on Google Forms."
     }
   },
   "DiseaseLibrary": {
@@ -1195,13 +1197,28 @@
     "kicker": "Public awareness research",
     "title": "What Pakistan Knows",
     "subtitle": "Understanding public awareness of genetic disorders and inherited risk.",
+    "take": {
+      "title": "Take the survey",
+      "body": "Help Shared Blood understand how genetics, culture and family traditions shape health in Pakistan. Your answers are anonymous and will help improve public understanding of inherited disorders.",
+      "factsLabel": "About the survey",
+      "facts": {
+        "questions": "{count} short questions",
+        "anonymous": "Anonymous",
+        "englishOnly": "In English",
+        "bilingual": "In English and Urdu",
+        "googleForms": "Opens on Google Forms"
+      },
+      "cta": "Take the survey",
+      "opensInNewTab": "(opens Google Forms in a new tab)",
+      "topicsTitle": "What the survey asks about"
+    },
     "overview": {
       "title": "About this research",
-      "purpose": "Shared Blood studies what people know, do not know, and believe about inherited conditions, carrier status, family history, and genetic testing, and how awareness relates to family and social context. It reports aggregate findings from people who chose to take part in a survey.",
+      "purpose": "Shared Blood’s public survey explores how genetics, culture and family traditions shape health in Pakistan: what people know about inherited disorders, how they see cousin marriage and premarital screening, and what they think should change. Findings will be reported only in aggregate, from the people who chose to take part.",
       "period": "Collection period",
       "cities": "Cities in sample",
       "totalResponses": "Total responses",
-      "disclaimer": "These findings describe the people who participated in the survey. They may show patterns within the survey sample, but should not automatically be read as representing all people in Pakistan or all residents of the surveyed cities.",
+      "disclaimer": "These findings describe the people who participated in the survey. They may show patterns within the survey sample, but should not automatically be read as representing all people in Pakistan or in any one province.",
       "methodologySummary": "In brief"
     },
     "findings": {
@@ -1271,18 +1288,18 @@
     },
     "methodology": {
       "title": "Methodology & limitations",
-      "samplingTitle": "How respondents were recruited",
-      "samplingPending": "Recruitment and sampling details will be documented here when an approved survey dataset is published.",
+      "samplingTitle": "How the survey works",
+      "samplingPending": "The survey is an online Google Form that people choose to fill in. Because respondents choose to take part, results will describe the people who answered, not a random sample of the population.",
       "privacyTitle": "Privacy",
-      "privacyPending": "The privacy and consent terminology will match the actual data process and be documented here when a survey is published.",
-      "eligibilityTitle": "Who could take part",
-      "eligibilityBody": "Participation is voluntary and open to adults aged 18 or older who complete the survey in English or Urdu. Residence is not inferred from IP address.",
+      "privacyPending": "The form does not ask for your name, contact details or date of birth. It asks for an age group and the province your family belongs to, and results will only be reported in aggregate.",
+      "eligibilityTitle": "Who can take part",
+      "eligibilityBody": "Anyone can fill in the survey. It is currently available in English only, and it asks which age group you are in, starting from under 18.",
       "limitationsTitle": "Limitations",
-      "disclaimer": "Shared Blood's survey findings describe the people who participated in the survey. The results may identify patterns within the survey sample but should not automatically be interpreted as representing all people in Pakistan or all residents of the surveyed cities."
+      "disclaimer": "Shared Blood’s survey findings describe the people who participated in the survey. The results may identify patterns within the survey sample but should not automatically be interpreted as representing all people in Pakistan or in any one province."
     },
     "empty": {
       "title": "Survey findings are being prepared",
-      "body": "Responses are collected externally, cleaned and aggregated offline, and reviewed before publication. Aggregate findings will appear here once they have been approved. No draft or estimated statistics are shown in the meantime."
+      "body": "The survey is open now. Once responses have been collected, they will be cleaned, combined and reviewed before any results are published here. No draft or estimated statistics are shown in the meantime."
     },
     "chart": {
       "suppressed": "Not shown",
@@ -1300,6 +1317,19 @@
       "title": "Our community work",
       "body": "Shared Blood applies its scientific and educational work outside the website through direct community engagement: childcare-worker education, awareness sessions, and learning-booklet distribution. This page documents what we did, who it was for, what we delivered, what we measured, what we observed, and how that work changed the project.",
       "positioning": "We frame community work as educational collaboration and public-health awareness, not saving communities from their traditions. We prioritise evidence of work over promotional language, and we recognise the family structures, healthcare access, and existing knowledge of the people we work with."
+    },
+    "ongoing": {
+      "title": "Our ongoing activities",
+      "body": "Community work Shared Blood is carrying out now, with photos shared with the consent of the people shown.",
+      "badge": "Ongoing",
+      "place": "Where",
+      "audience": "Who it is for",
+      "resourceLink": "Read the learning booklet",
+      "gallery": "Photos of Shared Blood community work",
+      "previous": "Previous photo",
+      "next": "Next photo",
+      "goTo": "Show photo {n}",
+      "position": "Photo {current} of {total}"
     },
     "impact": {
       "title": "Documented impact",
@@ -1393,8 +1423,8 @@
       "disclaimer": "This page documents Shared Blood's community activities and aggregate impact. It does not create profiles of participants, children, or patients, and it does not estimate hypothetical lives saved or diseases prevented."
     },
     "empty": {
-      "title": "Community work is being documented",
-      "body": "Shared Blood's community work is currently being documented for publication. Approved activities and aggregate impact will appear here once they have been reviewed. Planned activities are never shown as completed impact."
+      "title": "Impact records are being documented",
+      "body": "Detailed activity records and aggregate impact figures are still being reviewed, and will appear here once approved. Planned activities are never shown as completed impact."
     },
     "scopes": {
       "CHILDCARE_WORKER_EDUCATION": "Childcare-worker education",

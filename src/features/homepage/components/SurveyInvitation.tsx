@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
-import { ClipboardList, ArrowRight } from 'lucide-react';
-import { Link } from '@/i18n/navigation';
-import { ROUTES } from '@/constants/routes';
+import { ClipboardList, ExternalLink } from 'lucide-react';
+import { EXTERNAL_LINKS } from '@/constants/config';
 import { PageContainer } from '@/components/layout/PageContainer';
 
 /**
  * Survey Invitation (spec §Survey Invitation): encourage participation and
- * link to the Survey Portal. The survey itself is NOT embedded here.
+ * link to the awareness survey on Google Forms. The survey is never embedded
+ * (no third-party frames or scripts); it opens in a new tab.
  */
 export function SurveyInvitation() {
   const t = useTranslations('Home.survey');
@@ -43,13 +43,18 @@ export function SurveyInvitation() {
           <p className="relative max-w-2xl text-primary-foreground/80">
             {t('importance')}
           </p>
-          <Link
-            href={ROUTES.survey}
+          {/* The survey runs on Google Forms; open it without handing over this tab. */}
+          <a
+            href={EXTERNAL_LINKS.awarenessSurvey}
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative mt-2 inline-flex min-h-12 cursor-pointer items-center gap-2 rounded-lg bg-background px-6 font-semibold text-primary shadow-soft transition-transform duration-200 ease-out-soft hover:-translate-y-0.5 active:scale-[0.98]"
           >
             {t('cta')}
-            <ArrowRight className="h-5 w-5 rtl:rotate-180" aria-hidden="true" />
-          </Link>
+            <span className="sr-only">{t('opensInNewTab')}</span>
+            <ExternalLink className="h-5 w-5" aria-hidden="true" />
+          </a>
+          <p className="relative text-sm text-primary-foreground/75">{t('formNote')}</p>
         </div>
       </PageContainer>
     </section>

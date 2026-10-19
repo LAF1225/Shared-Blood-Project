@@ -9,3 +9,9 @@ export const SITE_CONFIG = {
   locales: ['en', 'ur'] as const,
   defaultLocale: 'en' as const,
 } as const;
+
+/** Third-party pages the site links to (opened in a new tab, never embedded). */
+export const EXTERNAL_LINKS = {
+  /** Shared Blood's awareness survey, hosted on Google Forms. */
+  awarenessSurvey: 'https://forms.gle/rAc7vv4CNUJHY3qr7',
+} as const;

@@ -1,8 +1,10 @@
 import { PageContainer } from '@/components/layout';
 import type {
   ActivityType,
+  CommunityActivityHighlight,
   CommunityFieldworkDataset,
   CommunityImpactFinding,
+  CommunityPhoto,
   FieldworkCity,
 } from '../types';
 import { getRenderableDataset } from '../validate';
@@ -27,6 +29,7 @@ import { CommunityMethodology } from './CommunityMethodology';
 import { CommunityEmptyState } from './CommunityEmptyState';
 import { PartnerList } from './PartnerList';
 import { PublicActivityPage } from './PublicActivityPage';
+import { CommunityActivities } from './CommunityActivities';
 
 type Translator = (key: string, values?: Record<string, string | number>) => string;
 
@@ -60,9 +63,14 @@ export function SharedBloodInCommunity({
   t,
   selectedActivityId,
   filters,
+  highlights = [],
+  photos = [],
 }: {
   dataset: CommunityFieldworkDataset | null;
   findings: readonly CommunityImpactFinding[];
+  /** Ongoing activity highlights and their photos, shown after the intro. */
+  highlights?: readonly CommunityActivityHighlight[];
+  photos?: readonly CommunityPhoto[];
   locale: string;
   t: Translator;
   selectedActivityId?: string | null;
@@ -120,6 +128,8 @@ export function SharedBloodInCommunity({
             {t('intro.positioning')}
           </p>
         </section>
+
+        <CommunityActivities activities={highlights} photos={photos} locale={locale} t={t} />
 
         {safeDataset && <ImpactSummaryCards summary={safeDataset.impactSummary} t={t} />}
 
