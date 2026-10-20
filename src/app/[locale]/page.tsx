@@ -6,7 +6,6 @@ import {
   FeaturedDiseases,
   GeneticsExplorerPreview,
   MapPreview,
-  AwarenessStatistics,
   CommunityImpact,
   ParentResources,
   SurveyInvitation,
@@ -39,9 +38,6 @@ export default async function HomePage({
       </Reveal>
       <Reveal>
         <MapPreview />
-      </Reveal>
-      <Reveal>
-        <AwarenessStatistics />
       </Reveal>
       <Reveal>
         <CommunityImpact />

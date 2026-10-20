@@ -12,6 +12,7 @@
  * framework-free and unit-tested independently of React (spec §51).
  */
 export { SharedBloodInCommunity } from './components/SharedBloodInCommunity';
+export { CommunityPage } from './components/CommunityPage';
 
 export { PUBLIC_DATASET, PUBLIC_FINDINGS } from './data/dataset';
 export { COMMUNITY_ACTIVITIES, COMMUNITY_PHOTOS } from './data/highlights';
