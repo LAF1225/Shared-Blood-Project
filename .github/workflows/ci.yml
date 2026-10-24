@@ -16,11 +16,25 @@ on:
 permissions:
   contents: read
 
-# A newer push supersedes an in-flight run for the same ref, but never cancels a
-# run on `main` that a deployment may be gating on.
+# A newer run always supersedes an older one for the same ref.
+#
+# This previously read `cancel-in-progress: ${{ github.event_name ==
+# 'pull_request' }}`, so pushes to `main` queued behind each other rather than
+# superseding. That looked safer and was not: when a push run was cancelled
+# abnormally it never released the slot, and every subsequent push run sat
+# pending behind a run that would never start. One wedged on 2026-08-06 and
+# blocked `main` for the better part of an hour.
+#
+# `cancel-in-progress: true` makes the situation self-healing, and costs
+# nothing here: the newest commit is the only one whose result matters, and
+# deployment is gated by the pull request's own checks, not by this run.
+#
+# The group name is also deliberately different from the old one, so runs
+# created after this change cannot collide with the wedged run still holding
+# the previous group.
 concurrency:
-  group: ci-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   quality:
